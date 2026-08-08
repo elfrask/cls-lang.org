@@ -1,0 +1,576 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "key": "guia",
+      "items": [
+        {
+          "slug": "instalacion",
+          "title": "Instalación"
+        },
+        {
+          "slug": "inicio-rapido",
+          "title": "Inicio rápido"
+        },
+        {
+          "slug": "cli",
+          "title": "CLI"
+        },
+        {
+          "slug": "configuracion",
+          "title": "Configuración: cls.json"
+        }
+      ]
+    },
+    {
+      "key": "lenguaje",
+      "items": [
+        {
+          "slug": "arquitectura",
+          "title": "Arquitectura del lenguaje"
+        },
+        {
+          "slug": "sintaxis",
+          "title": "Sintaxis del lenguaje"
+        },
+        {
+          "slug": "tipos",
+          "title": "Sistema de tipos"
+        },
+        {
+          "slug": "control-de-flujo",
+          "title": "Control de flujo"
+        },
+        {
+          "slug": "funciones",
+          "title": "Funciones"
+        },
+        {
+          "slug": "oop",
+          "title": "Clases y programación orientada a objetos"
+        },
+        {
+          "slug": "enums",
+          "title": "Enums"
+        },
+        {
+          "slug": "modulos",
+          "title": "Módulos"
+        },
+        {
+          "slug": "cmx",
+          "title": "CMX (marcado)"
+        },
+        {
+          "slug": "extension",
+          "title": "Extensiones nativas (`extension`)"
+        },
+        {
+          "slug": "multi-entorno",
+          "title": "Directiva `when` — implementaciones multi-entorno"
+        }
+      ]
+    },
+    {
+      "key": "runtime",
+      "items": [
+        {
+          "slug": "ejecucion",
+          "title": "Ejecución: el intérprete"
+        },
+        {
+          "slug": "valores",
+          "title": "Valores"
+        },
+        {
+          "slug": "biblioteca-estandar",
+          "title": "Biblioteca estándar"
+        },
+        {
+          "slug": "metodos-primitivos",
+          "title": "Métodos de tipos primitivos (sin boxing)"
+        },
+        {
+          "slug": "errores",
+          "title": "Sistema de errores"
+        }
+      ]
+    },
+    {
+      "key": "modules",
+      "items": [
+        {
+          "slug": "intrinsics",
+          "title": "Funciones Intrínsecas"
+        },
+        {
+          "slug": "stdlib",
+          "title": "Módulos Internos — API"
+        },
+        {
+          "slug": "type-system",
+          "title": "Sistema de Tipos"
+        }
+      ]
+    },
+    {
+      "key": "ejecucion",
+      "items": [
+        {
+          "slug": "resolvers",
+          "title": "Resolvers de módulos"
+        },
+        {
+          "slug": "sin-nodo",
+          "title": "Ejecutar un script sin nodo (embedding)"
+        }
+      ]
+    },
+    {
+      "key": "future",
+      "items": [
+        {
+          "slug": "native/ffi",
+          "title": "FFI e Interoperabilidad Nativa"
+        },
+        {
+          "slug": "native/native-aot",
+          "title": "Compilación Nativa AOT (Backend LLVM)"
+        },
+        {
+          "slug": "native/primitive-methods",
+          "title": "Métodos de tipos primitivos (sin boxing) — diseño para compilación nativa"
+        },
+        {
+          "slug": "readme",
+          "title": "CLS — Planes Futuros"
+        },
+        {
+          "slug": "wasm/jit-runtime",
+          "title": "JIT en el Runtime (`clxr` con Cranelift)"
+        },
+        {
+          "slug": "wasm/memory-gc",
+          "title": "GC y gestión de memoria en WASM"
+        },
+        {
+          "slug": "wasm/readme",
+          "title": "Backend WASM"
+        },
+        {
+          "slug": "wasm/wasm-pipeline",
+          "title": "Compilación WASM (`.clbin`)"
+        }
+      ]
+    },
+    {
+      "key": "project",
+      "items": [
+        {
+          "slug": "architecture",
+          "title": "Arquitectura"
+        },
+        {
+          "slug": "readme",
+          "title": "CLS 2.0 — Proyecto"
+        }
+      ]
+    },
+    {
+      "key": "desarrollo",
+      "items": [
+        {
+          "slug": "agregar-feature",
+          "title": "Cómo agregar una feature al lenguaje"
+        },
+        {
+          "slug": "agregar-modulo-interno",
+          "title": "Cómo agregar un módulo interno"
+        },
+        {
+          "slug": "arquitectura-core",
+          "title": "Arquitectura de cls-core"
+        },
+        {
+          "slug": "contribuir",
+          "title": "Contribuir"
+        },
+        {
+          "slug": "testing",
+          "title": "Testing"
+        }
+      ]
+    },
+    {
+      "key": "contribution",
+      "items": [
+        {
+          "slug": "core",
+          "title": "cls-core — Compilador"
+        },
+        {
+          "slug": "infrastructure",
+          "title": "Infraestructura de Errores"
+        },
+        {
+          "slug": "pipeline",
+          "title": "Pipeline de Compilación"
+        },
+        {
+          "slug": "runtime",
+          "title": "cls-runtime — Motor de Ejecución"
+        }
+      ]
+    },
+    {
+      "key": "implement",
+      "items": [
+        {
+          "slug": "nodes",
+          "title": "Crear tu propio Nodo"
+        },
+        {
+          "slug": "rust",
+          "title": "Implementación desde Rust"
+        }
+      ]
+    },
+    {
+      "key": "use",
+      "items": [
+        {
+          "slug": "cls-config",
+          "title": "Configuración de proyectos CLS"
+        },
+        {
+          "slug": "data-structures",
+          "title": "Estructuras de Datos"
+        },
+        {
+          "slug": "getting-started",
+          "title": "Uso de CLS"
+        },
+        {
+          "slug": "modules",
+          "title": "Clases, Módulos e Imports"
+        },
+        {
+          "slug": "statements",
+          "title": "Estructuras de Control"
+        },
+        {
+          "slug": "syntax",
+          "title": "Sintaxis de CLS"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "slug": "core",
+      "path": "contribution/CORE.md",
+      "title": "cls-core — Compilador",
+      "section": "contribution"
+    },
+    {
+      "slug": "infrastructure",
+      "path": "contribution/INFRASTRUCTURE.md",
+      "title": "Infraestructura de Errores",
+      "section": "contribution"
+    },
+    {
+      "slug": "pipeline",
+      "path": "contribution/PIPELINE.md",
+      "title": "Pipeline de Compilación",
+      "section": "contribution"
+    },
+    {
+      "slug": "runtime",
+      "path": "contribution/RUNTIME.md",
+      "title": "cls-runtime — Motor de Ejecución",
+      "section": "contribution"
+    },
+    {
+      "slug": "agregar-feature",
+      "path": "desarrollo/agregar-feature.md",
+      "title": "Cómo agregar una feature al lenguaje",
+      "section": "desarrollo"
+    },
+    {
+      "slug": "agregar-modulo-interno",
+      "path": "desarrollo/agregar-modulo-interno.md",
+      "title": "Cómo agregar un módulo interno",
+      "section": "desarrollo"
+    },
+    {
+      "slug": "arquitectura-core",
+      "path": "desarrollo/arquitectura-core.md",
+      "title": "Arquitectura de cls-core",
+      "section": "desarrollo"
+    },
+    {
+      "slug": "contribuir",
+      "path": "desarrollo/contribuir.md",
+      "title": "Contribuir",
+      "section": "desarrollo"
+    },
+    {
+      "slug": "testing",
+      "path": "desarrollo/testing.md",
+      "title": "Testing",
+      "section": "desarrollo"
+    },
+    {
+      "slug": "resolvers",
+      "path": "ejecucion/resolvers.md",
+      "title": "Resolvers de módulos",
+      "section": "ejecucion"
+    },
+    {
+      "slug": "sin-nodo",
+      "path": "ejecucion/sin-nodo.md",
+      "title": "Ejecutar un script sin nodo (embedding)",
+      "section": "ejecucion"
+    },
+    {
+      "slug": "native/ffi",
+      "path": "future/native/FFI.md",
+      "title": "FFI e Interoperabilidad Nativa",
+      "section": "future"
+    },
+    {
+      "slug": "native/native-aot",
+      "path": "future/native/NATIVE_AOT.md",
+      "title": "Compilación Nativa AOT (Backend LLVM)",
+      "section": "future"
+    },
+    {
+      "slug": "native/primitive-methods",
+      "path": "future/native/PRIMITIVE_METHODS.md",
+      "title": "Métodos de tipos primitivos (sin boxing) — diseño para compilación nativa",
+      "section": "future"
+    },
+    {
+      "slug": "readme",
+      "path": "project/README.md",
+      "title": "CLS 2.0 — Proyecto",
+      "section": "project"
+    },
+    {
+      "slug": "wasm/jit-runtime",
+      "path": "future/wasm/JIT_RUNTIME.md",
+      "title": "JIT en el Runtime (`clxr` con Cranelift)",
+      "section": "future"
+    },
+    {
+      "slug": "wasm/memory-gc",
+      "path": "future/wasm/MEMORY_GC.md",
+      "title": "GC y gestión de memoria en WASM",
+      "section": "future"
+    },
+    {
+      "slug": "wasm/readme",
+      "path": "future/wasm/README.md",
+      "title": "Backend WASM",
+      "section": "future"
+    },
+    {
+      "slug": "wasm/wasm-pipeline",
+      "path": "future/wasm/WASM_PIPELINE.md",
+      "title": "Compilación WASM (`.clbin`)",
+      "section": "future"
+    },
+    {
+      "slug": "cli",
+      "path": "guia/cli.md",
+      "title": "CLI",
+      "section": "guia"
+    },
+    {
+      "slug": "configuracion",
+      "path": "guia/configuracion.md",
+      "title": "Configuración: cls.json",
+      "section": "guia"
+    },
+    {
+      "slug": "inicio-rapido",
+      "path": "guia/inicio-rapido.md",
+      "title": "Inicio rápido",
+      "section": "guia"
+    },
+    {
+      "slug": "instalacion",
+      "path": "guia/instalacion.md",
+      "title": "Instalación",
+      "section": "guia"
+    },
+    {
+      "slug": "nodes",
+      "path": "implement/NODES.md",
+      "title": "Crear tu propio Nodo",
+      "section": "implement"
+    },
+    {
+      "slug": "rust",
+      "path": "implement/RUST.md",
+      "title": "Implementación desde Rust",
+      "section": "implement"
+    },
+    {
+      "slug": "arquitectura",
+      "path": "lenguaje/arquitectura.md",
+      "title": "Arquitectura del lenguaje",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "cmx",
+      "path": "lenguaje/cmx.md",
+      "title": "CMX (marcado)",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "control-de-flujo",
+      "path": "lenguaje/control-de-flujo.md",
+      "title": "Control de flujo",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "enums",
+      "path": "lenguaje/enums.md",
+      "title": "Enums",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "extension",
+      "path": "lenguaje/extension.md",
+      "title": "Extensiones nativas (`extension`)",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "funciones",
+      "path": "lenguaje/funciones.md",
+      "title": "Funciones",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "modulos",
+      "path": "lenguaje/modulos.md",
+      "title": "Módulos",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "multi-entorno",
+      "path": "lenguaje/multi-entorno.md",
+      "title": "Directiva `when` — implementaciones multi-entorno",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "oop",
+      "path": "lenguaje/oop.md",
+      "title": "Clases y programación orientada a objetos",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "sintaxis",
+      "path": "lenguaje/sintaxis.md",
+      "title": "Sintaxis del lenguaje",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "tipos",
+      "path": "lenguaje/tipos.md",
+      "title": "Sistema de tipos",
+      "section": "lenguaje"
+    },
+    {
+      "slug": "intrinsics",
+      "path": "modules/INTRINSICS.md",
+      "title": "Funciones Intrínsecas",
+      "section": "modules"
+    },
+    {
+      "slug": "stdlib",
+      "path": "modules/STDLIB.md",
+      "title": "Módulos Internos — API",
+      "section": "modules"
+    },
+    {
+      "slug": "type-system",
+      "path": "modules/TYPE_SYSTEM.md",
+      "title": "Sistema de Tipos",
+      "section": "modules"
+    },
+    {
+      "slug": "architecture",
+      "path": "project/ARCHITECTURE.md",
+      "title": "Arquitectura",
+      "section": "project"
+    },
+    {
+      "slug": "biblioteca-estandar",
+      "path": "runtime/biblioteca-estandar.md",
+      "title": "Biblioteca estándar",
+      "section": "runtime"
+    },
+    {
+      "slug": "ejecucion",
+      "path": "runtime/ejecucion.md",
+      "title": "Ejecución: el intérprete",
+      "section": "runtime"
+    },
+    {
+      "slug": "errores",
+      "path": "runtime/errores.md",
+      "title": "Sistema de errores",
+      "section": "runtime"
+    },
+    {
+      "slug": "metodos-primitivos",
+      "path": "runtime/metodos-primitivos.md",
+      "title": "Métodos de tipos primitivos (sin boxing)",
+      "section": "runtime"
+    },
+    {
+      "slug": "valores",
+      "path": "runtime/valores.md",
+      "title": "Valores",
+      "section": "runtime"
+    },
+    {
+      "slug": "cls-config",
+      "path": "use/CLS_CONFIG.md",
+      "title": "Configuración de proyectos CLS",
+      "section": "use"
+    },
+    {
+      "slug": "data-structures",
+      "path": "use/DATA_STRUCTURES.md",
+      "title": "Estructuras de Datos",
+      "section": "use"
+    },
+    {
+      "slug": "getting-started",
+      "path": "use/GETTING_STARTED.md",
+      "title": "Uso de CLS",
+      "section": "use"
+    },
+    {
+      "slug": "modules",
+      "path": "use/MODULES.md",
+      "title": "Clases, Módulos e Imports",
+      "section": "use"
+    },
+    {
+      "slug": "statements",
+      "path": "use/STATEMENTS.md",
+      "title": "Estructuras de Control",
+      "section": "use"
+    },
+    {
+      "slug": "syntax",
+      "path": "use/SYNTAX.md",
+      "title": "Sintaxis de CLS",
+      "section": "use"
+    }
+  ]
+}

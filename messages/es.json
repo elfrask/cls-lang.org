@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "title": "CLS — Lenguaje de programación WASM-first",
+    "description": "Lenguaje de programación modular, seguro y multiplataforma que compila a WebAssembly. Diseñado para scripting, plugins y aplicaciones de propósito general."
+  },
+  "nav": {
+    "docs": "Docs",
+    "about": "Acerca",
+    "search": "Paquetes",
+    "download": "Descargar",
+    "getStarted": "Empezar"
+  },
+  "hero": {
+    "badge": "CLS 2.0 — WASM-first",
+    "title1": "Compilar una vez y",
+    "titleAccent": "Córrete donde sea",
+    "subtitle": "CLS es un lenguaje de programación modular, seguro y multiplataforma. Scripting, plugins y aplicaciones de propósito general con un núcleo mínimo y nodos host que lo extienden.",
+    "primaryCta": "Leer la documentación",
+    "secondaryCta": "Descargar CLS",
+    "codeTitle": "hola.clsx",
+    "codeLang": "clsx",
+    "terminalUser": "usr",
+    "terminalHost": "workspace",
+    "terminalCmd": "clx run hola.clsx"
+  },
+  "features": {
+    "title": "Diseñado para el futuro",
+    "subtitle": "Un lenguaje con una filosofía clara: todo es WASM, el núcleo es mínimo y los nodos extienden la funcionalidad.",
+    "wasm": {
+      "title": "WASM-first",
+      "description": "Compilador, runtime y aplicaciones compilan a WebAssembly. Corre en cualquier entorno que soporte WASM."
+    },
+    "jit": {
+      "title": "JIT con Cranelift",
+      "description": "Ejecución just-in-time de CLS a WASM con wasmtime. Hasta ~8000x de aceleración sobre el tree-walker."
+    },
+    "ffi": {
+      "title": "FFI nativo",
+      "description": "Interoperación directa con librerías C vía la directiva `extension`, con tipos ABI dedicados."
+    },
+    "oop": {
+      "title": "OOP con magic methods",
+      "description": "Clases, herencia, genéricos y magic methods: `__toString`, `__iter`, `__get` y más."
+    },
+    "modules": {
+      "title": "Sistema de módulos",
+      "description": "Dos sistemas ortogonales: imports de fuente y librerías compiladas `.clslib`."
+    },
+    "cmx": {
+      "title": "CMX nativo",
+      "description": "Marcado tipo JSX directamente en el lenguaje para construir interfaces con `CmxValue`."
+    }
+  },
+  "pipeline": {
+    "title": "Cómo funciona",
+    "subtitle": "Del código fuente al bytecode WebAssembly a través de un pipeline claro y comprobable.",
+    "step1": {
+      "title": "Lexer + Parser",
+      "description": "Tu código `.clsx` se tokeniza y parsea a un AST serializable."
+    },
+    "step2": {
+      "title": "Type checker",
+      "description": "Verificación de tipos TypeScript-style con uniones, genéricos y literales."
+    },
+    "step3": {
+      "title": "Optimizer",
+      "description": "Optimizaciones de AST antes de la emisión."
+    },
+    "step4": {
+      "title": "Backend WASM",
+      "description": "Emisión de WASM: JIT con wasmtime o binarios `.clbin` en el futuro."
+    }
+  },
+  "stdlib": {
+    "title": "Biblioteca estándar",
+    "subtitle": "Módulos compactos y enfocados que cubren las necesidades del día a día."
+  },
+  "cta": {
+    "title": "¿Listo para escribir CLS?",
+    "subtitle": "Instala el CLI, crea tu primer proyecto y compila a WebAssembly.",
+    "docs": "Ir a la documentación",
+    "download": "Descargar v2.0.0"
+  },
+  "footer": {
+    "tagline": "Lenguaje de programación modular, WASM-first.",
+    "language": "Lenguaje",
+    "project": "Proyecto",
+    "license": "MIT License",
+    "madeWith": "Hecho con"
+  },
+  "about": {
+    "title": "Acerca de CLS",
+    "subtitle": "Un lenguaje de programación modular, seguro y multiplataforma.",
+    "philosophyTitle": "Filosofía",
+    "philosophy1": "Todo es WASM: compilador, runtime y apps compilan a WebAssembly.",
+    "philosophy2": "El núcleo es mínimo; los nodos (ejecutables host) extienden la funcionalidad.",
+    "philosophy3": "Host-agnóstico: corre en cualquier entorno que soporte WASM.",
+    "philosophy4": "Embebible desde Rust, Python, JS, Go, C# y más.",
+    "layersTitle": "Arquitectura de 3 capas",
+    "layersSubtitle": "Una separación limpia entre el lenguaje, la ejecución y el host.",
+    "layer1": {
+      "title": "cls-core",
+      "description": "El lenguaje: lexer, parser, type checker, optimizer y backends. Agnóstico del entorno."
+    },
+    "layer2": {
+      "title": "cls-runtime",
+      "description": "La ejecución: intérprete tree-walker, valores, stdlib, GC y VFS con sandbox."
+    },
+    "layer3": {
+      "title": "nodos",
+      "description": "Los hosts: clx (CLI de desarrollo) y clxr (runtime ligero). Proveen FS, red, CLI y config."
+    },
+    "roadmapTitle": "Roadmap",
+    "roadmapSubtitle": "Del intérprete tree-walker a la compilación nativa.",
+    "f1": "Workspace + crates + nodos base",
+    "f2": "Pipeline lexer → parser → tree-walker",
+    "f3": "Type checker + name resolver + optimizer",
+    "f4": "Stdlib: math, json, fs, http, intrinsics",
+    "f5": "ModuleResolver + imports + exports + user modules",
+    "f6": "Migración ccls→clx, .ccls→.clsx",
+    "extra": "LSP + extensión VS Code + type maps + async/await + CMX + errores con trace",
+    "jit": "JIT (CLS → WASM → wasmtime) vía `clx run --jit`",
+    "repoTitle": "El código",
+    "repoDescription": "Explora el repositorio, contribuye o abre un issue.",
+    "repoCta": "Ir al repositorio"
+  },
+  "download": {
+    "title": "Descargar CLS",
+    "subtitle": "Versión actual 2.0.0. Compilado a WebAssembly, disponible para todas las plataformas.",
+    "version": "v2.0.0",
+    "stable": "Estable",
+    "windows": {
+      "name": "Windows",
+      "description": "Instalador .exe para Windows 10/11 (x64).",
+      "cmd": "clx.exe run app.clsx"
+    },
+    "linux": {
+      "name": "Linux",
+      "description": "Binario para Linux (x64 y arm64).",
+      "cmd": "./clx run app.clsx"
+    },
+    "macos": {
+      "name": "macOS",
+      "description": "Binario para macOS (Apple Silicon e Intel).",
+      "cmd": "./clx run app.clsx"
+    },
+    "wasi": {
+      "name": "WASI",
+      "description": "Compila tu runtime a WASI para ejecutarlo en cualquier entorno WASM.",
+      "cmd": "clx run --jit app.clsx"
+    },
+    "viaCargo": "Alternativa: instalar desde fuente",
+    "viaCargoText": "CLS está escrito en Rust. Puedes compilar el CLI desde el repositorio:",
+    "cargoCmd": "cargo build --bin clx",
+    "instruccionesTitle": "Guía de instalación",
+    "steps": {
+      "1": "Descarga el binario para tu sistema operativo.",
+      "2": "Añade el binario a tu PATH o usa la ruta completa.",
+      "3": "Verifica la instalación:",
+      "4": "Crea tu primer proyecto:"
+    },
+    "verifyCmd": "clx --version",
+    "newCmd": "clx new hola",
+    "comingSoon": "Próximamente"
+  },
+  "search": {
+    "title": "Paquetes",
+    "subtitle": "Explora la paquetería de CLS. El registry estará disponible pronto.",
+    "placeholder": "Buscar paquetes…",
+    "searchBtn": "Buscar",
+    "registryTitle": "Registry CLS",
+    "registryText": "El registry de paquetes oficial estará disponible en",
+    "registryUrl": "registry.cls-lang.org",
+    "apiTitle": "API de paquetes",
+    "apiText": "El endpoint REST expondrá búsqueda, metadatos y descargas de paquetes `.clslib`.",
+    "emptyTitle": "Aún no hay resultados",
+    "emptyText": "El registry está en desarrollo. Pronto podrás buscar y publicar paquetes aquí.",
+    "cliHint": "Cuando esté listo, podrás instalar con:",
+    "cliCmd": "clx add <paquete>",
+    "status": "En desarrollo"
+  },
+  "docs": {
+    "title": "Documentación",
+    "subtitle": "Aprende CLS desde cero o consulta la referencia del lenguaje.",
+    "onThisPage": "En esta página",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "notTranslated": "Esta página no está traducida. Mostrando la versión en español.",
+    "notFound": "Documentación no encontrada",
+    "notFoundText": "El documento que buscas no existe. Revisa la URL o vuelve al índice.",
+    "backToIndex": "Volver al índice",
+    "indexTitle": "Índice de documentación",
+    "editPage": "Editar esta página",
+    "sections": {
+      "guia": "Guía",
+      "lenguaje": "Lenguaje",
+      "runtime": "Runtime",
+      "modules": "Módulos",
+      "ejecucion": "Ejecución",
+      "future": "Futuro",
+      "project": "Proyecto",
+      "desarrollo": "Desarrollo",
+      "contribution": "Contribución",
+      "implement": "Implementación",
+      "use": "Legacy"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Página no encontrada",
+    "text": "La página que buscas no existe o fue movida.",
+    "backHome": "Volver al inicio"
+  },
+  "common": {
+    "copy": "Copiar",
+    "copied": "Copiado"
+  }
+}
