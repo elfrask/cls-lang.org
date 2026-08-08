@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { href: "/docs", key: "nav.docs" },
+  { href: "/blog", key: "nav.blog" },
+  { href: "/showcase", key: "nav.showcase" },
   { href: "/about", key: "nav.about" },
   { href: "/search", key: "nav.search" },
   { href: "/download", key: "nav.download" },
@@ -54,7 +56,7 @@ export function Navbar() {
           <LocaleSwitcher />
           <Button variant="ghost" size="icon-sm" asChild aria-label="GitHub">
             <a
-              href="https://github.com/frask/cls"
+              href="https://github.com/elfrask/cls"
               target="_blank"
               rel="noreferrer"
             >

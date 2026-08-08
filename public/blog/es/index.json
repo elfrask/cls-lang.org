@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "slug": "primer-devlog",
+      "title": "Primer devlog: CLS 2.0 y el nuevo sitio",
+      "date": "2026-08-08",
+      "author": "Equipo CLS",
+      "excerpt": "Bienvenidos al blog. En este primer devlog contamos qué trae CLS 2.0, el rumbo del lenguaje y cómo se construyó esta web."
+    }
+  ]
+}
