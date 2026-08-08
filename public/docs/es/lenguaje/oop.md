@@ -32,7 +32,7 @@ class Persona {
 ```clsx
 var p = Persona("Ana", 30);
 print(p.saludar());
-print(Persona.crear("Bea"));   // método estático
+print(Persona.crear("Bea"));   # método estático
 ```
 
 ## Herencia
@@ -44,7 +44,7 @@ class Animal {
     function hablar() -> String { return me.nombre + " hace ruido"; }
 };
 
-class Perro: Animal {     // ':' es la sintaxis principal
+class Perro: Animal {     # ':' es la sintaxis principal
     function hablar() -> String {
         return super.hablar() + " y ladra";
     }
@@ -62,9 +62,9 @@ class Perro: Animal {     // ':' es la sintaxis principal
 
 ```clsx
 var d = Perro("Rex");
-print(d is Perro);     // true (instancia directa)
-print(d is Animal);    // true (por herencia)
-print(d is String);    // false
+print(d is Perro);     # true (instancia directa)
+print(d is Animal);    # true (por herencia)
+print(d is String);    # false
 ```
 
 `is` valida si un objeto es instancia de una clase o de una clase ancestro.

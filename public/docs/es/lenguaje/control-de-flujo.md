@@ -116,7 +116,7 @@ Devuelve un valor de la función. En funciones sin retorno, `return` sin valor.
 
 ```clsx
 with (expresión) as nombre {
-    ...   // 'nombre' disponible en el bloque
+    ...   # 'nombre' disponible en el bloque
 }
 ```
 

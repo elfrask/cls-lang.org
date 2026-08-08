@@ -65,12 +65,12 @@ encaja con el modelo de `docs/future/native/` (tipos planos `i64`/`f64`/`ptr`).
 ## Ejemplos
 
 ```clsx
-"Hola Mundo".upper();        // "HOLA MUNDO"
-"hola".length;               // 4
-[1, 2, 3].push(4);           // muta el array; [1,2,3,4]
-(1, 2, 3).join("+");         // "1+2+3"
-{a: 1}.has("a");             // true
-(-7).abs();                  // 7
+"Hola Mundo".upper();        # "HOLA MUNDO"
+"hola".length;               # 4
+[1, 2, 3].push(4);           # muta el array; [1,2,3,4]
+(1, 2, 3).join("+");         # "1+2+3"
+{a: 1}.has("a");             # true
+(-7).abs();                  # 7
 ```
 
 ## Cómo agregar un método

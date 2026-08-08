@@ -35,9 +35,9 @@ CmxValue {
 Se accede con `.tag`, `.props` y `.children`:
 
 ```clsx
-print(app.tag);          // "App"
-print(app.props.titulo); // "Hola mundo"
-print(app.children[0].tag); // "Parrafo"
+print(app.tag);          # "App"
+print(app.props.titulo); # "Hola mundo"
+print(app.children[0].tag); # "Parrafo"
 ```
 
 ## Expresiones en atributos

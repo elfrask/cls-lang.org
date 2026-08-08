@@ -41,17 +41,17 @@ Las cadenas con comillas dobles y backtick admiten interpolación:
 
 ```clsx
 var nombre = "CLS";
-print("Hola, $nombre");            // variable
-print("Suma: ${2 + 3}");           // expresión
+print("Hola, $nombre");            # variable
+print("Suma: ${2 + 3}");           # expresión
 ```
 
 ## Variables
 
 ```clsx
-var x: int = 1;        // declaración tipada
-var y = 2;             // inferencia de tipo
-const PI = 3.14;       // constante (infiere literal type)
-let z = 0;             // alias de var
+var x: int = 1;        # declaración tipada
+var y = 2;             # inferencia de tipo
+const PI = 3.14;       # constante (infiere literal type)
+let z = 0;             # alias de var
 ```
 
 - `const` no puede reasignarse.
@@ -101,18 +101,18 @@ let z = 0;             // alias de var
 Las expresiones admiten precedencia estándar:
 
 ```clsx
-a + b * c        // * antes que +
-(a + b) * c      // paréntesis agrupan
-x ? a : b        // condicional
-f(x).campo[i]    // llamada, miembro, índice
+a + b * c        # * antes que +
+(a + b) * c      # paréntesis agrupan
+x ? a : b        # condicional
+f(x).campo[i]    # llamada, miembro, índice
 ```
 
 ### Literales de colección
 
 ```clsx
-[1, 2, 3]            // array (mutable)
-(1, "dos", 3.0)      // tupla (inmutable)
-{clave: 1, otro: 2}  // record / diccionario
+[1, 2, 3]            # array (mutable)
+(1, "dos", 3.0)      # tupla (inmutable)
+{clave: 1, otro: 2}  # record / diccionario
 ```
 
 ## Terminación

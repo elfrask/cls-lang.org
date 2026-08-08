@@ -28,9 +28,9 @@ Los símbolos sin `export` quedan privados al módulo.
 ```clsx
 import "lib" as lib;
 
-print(lib.doble(4));         // 8
-print(lib.VERSION);          // "1.0.0"
-print(lib.Color.Rojo);       // "Rojo"
+print(lib.doble(4));         # 8
+print(lib.VERSION);          # "1.0.0"
+print(lib.Color.Rojo);       # "Rojo"
 var c = lib.Contador(0);
 var p = lib.Par(1, 2);
 ```
@@ -74,7 +74,7 @@ un tipo importado es usable en anotaciones:
 ```clsx
 import "colores" as colores;
 
-var c: Color = Color.Rojo;   // 'Color' viene del prelude
+var c: Color = Color.Rojo;   # 'Color' viene del prelude
 ```
 
 La búsqueda de módulos es relativa al directorio del archivo que se verifica.

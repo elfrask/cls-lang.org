@@ -11,9 +11,9 @@ modo estricto y en la futura compilación. No genera código en runtime.
 
 ```clsx
 var par: (Int, String) = (1, "x");
-par[0];              // Int (índice literal → slot exacto)
+par[0];              # Int (índice literal → slot exacto)
 var i = 0;
-par[i];              // Int | String (índice dinámico → unión de slots)
+par[i];              # Int | String (índice dinámico → unión de slots)
 ```
 
 - Las tuplas son inmutables: `par[0] = 9` es error.
@@ -45,11 +45,11 @@ var d: Dict = {a: 1};
 ```clsx
 alias Color = "red" | "green" | "blue";
 
-var c: Color = "red";       // ok
-var d: Color = "purple";    // error en estricto
+var c: Color = "red";       # ok
+var d: Color = "purple";    # error en estricto
 
-const k = "constante";      // const infiere el literal "constante"
-var v = "x";                // var infiere String (base), no el literal
+const k = "constante";      # const infiere el literal "constante"
+var v = "x";                # var infiere String (base), no el literal
 ```
 
 - `Type::Literal` representa un valor concreto (`"red"`, `5`, `true`).
@@ -60,10 +60,10 @@ var v = "x";                // var infiere String (base), no el literal
 ## Alias de tipos
 
 ```clsx
-alias Vec3 = (Int, Int, Int);        // tupla
-alias FnInt = (Int) -> Int;          // función
-alias Color = "red" | "green";       // unión de literales
-alias Dict = Record<String, Int>;    // diccionario
+alias Vec3 = (Int, Int, Int);        # tupla
+alias FnInt = (Int) -> Int;          # función
+alias Color = "red" | "green";       # unión de literales
+alias Dict = Record<String, Int>;    # diccionario
 ```
 
 - La palabra clave es `alias` (evita la colisión con el intrinsic `type(val)`).
@@ -86,9 +86,9 @@ interface Hello<T=Int> {
 ## Extracción de tipos hijos
 
 ```clsx
-var n: Hello["num"] = 1;             // Int (el default de T)
-var s: Hello<String>["num"] = "x";   // String (T sustituido)
-var t: (Int, String)[1];             // String (slot 1 de la tupla)
+var n: Hello["num"] = 1;             # Int (el default de T)
+var s: Hello<String>["num"] = "x";   # String (T sustituido)
+var t: (Int, String)[1];             # String (slot 1 de la tupla)
 ```
 
 - `T["campo"]` extrae el tipo del campo (o del método, que es un tipo función).

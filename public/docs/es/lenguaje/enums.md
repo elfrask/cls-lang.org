@@ -25,10 +25,10 @@ enum Color {
 ```clsx
 var c = Color.Rojo;
 
-print(c);                 // "Rojo"
-print(c == Color.Rojo);   // true
-print(c == Color.Verde);  // false
-print(c is Color);        // true
+print(c);                 # "Rojo"
+print(c == Color.Rojo);   # true
+print(c == Color.Verde);  # false
+print(c is Color);        # true
 ```
 
 - **Comparación**: `==` compara por identidad (definición + índice).
@@ -57,8 +57,8 @@ for each v and i in (Color) {
 En el verificador, un enum define un tipo con el nombre del enum:
 
 ```clsx
-var c: Color = Color.Rojo;    // ok
-var d: Color = 5;             // error en estricto: Int no es Color
+var c: Color = Color.Rojo;    # ok
+var d: Color = 5;             # error en estricto: Int no es Color
 ```
 
 ## Runtime

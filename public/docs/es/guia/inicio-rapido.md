@@ -33,7 +33,7 @@ de comandos como un array de cadenas y devuelve un código de salida entero.
 ```clsx
 var nombre: String = "CLS";
 var edad: int = 30;
-const PI = 3.14159;        // const infiere un literal type
+const PI = 3.14159;        # const infiere un literal type
 var activo = true;
 ```
 
@@ -47,19 +47,19 @@ function sumar(a: int, b: int) -> int {
     return a + b;
 };
 
-print(sumar(2, 3));   // 5
+print(sumar(2, 3));   # 5
 ```
 
 ## Colecciones
 
 ```clsx
-var lista = [1, 2, 3];           // array (mutable)
-var tupla = (1, "dos", 3.0);     // tupla (inmutable)
-var dic = {clave: 1, otro: 2};   // record / diccionario
+var lista = [1, 2, 3];           # array (mutable)
+var tupla = (1, "dos", 3.0);     # tupla (inmutable)
+var dic = {clave: 1, otro: 2};   # record / diccionario
 
-print(lista.length);     // 3
-print(tupla[1]);         // "dos"
-print(dic.clave);        // 1
+print(lista.length);     # 3
+print(tupla[1]);         # "dos"
+print(dic.clave);        # 1
 ```
 
 Los métodos de tipos primitivos se resuelven por tipo (sin objetos):
@@ -94,9 +94,9 @@ enum Color {
 };
 
 var c = Color.Verde;
-print(c);                    // "Verde"
-print(c == Color.Verde);     // true
-print(c is Color);           // true
+print(c);                    # "Verde"
+print(c == Color.Verde);     # true
+print(c is Color);           # true
 
 for each color in (Color) {
     print(color);
@@ -119,7 +119,7 @@ class Persona {
 };
 
 var p = Persona("Ana");
-print(p.saludar());   // "Hola, Ana"
+print(p.saludar());   # "Hola, Ana"
 ```
 
 ## Módulos
@@ -138,7 +138,7 @@ Y `main.clsx`:
 import "lib" as lib;
 
 function main(args: String[]) -> int {
-    print(lib.doble(4));   // 8
+    print(lib.doble(4));   # 8
     return 0;
 };
 ```
