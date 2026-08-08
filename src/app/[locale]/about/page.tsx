@@ -155,7 +155,7 @@ export default async function AboutPage({
             </div>
             <Button size="lg" asChild className="shrink-0">
               <a
-                href="https://github.com/frask/cls"
+                href="https://github.com/elfrask/cls"
                 target="_blank"
                 rel="noreferrer"
               >

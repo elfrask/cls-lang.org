@@ -1,6 +1,4 @@
-export const HERO_SNIPPET = `# hola.clsx
-# CLS compila a WebAssembly
-
+export const HERO_SNIPPET = `
 import "math" as math;
 
 enum Nivel {
@@ -45,10 +43,10 @@ alias Color = "red" | "green";
 function duplicar(n: Int) -> Int {
     return n * 2;
 }`,
-  wasm: `# .clsx -> .clbin (WASM)
-clx build app.clsx
+  binary: `# .clsx -> binario nativo
+clx build app.clsx --target native
 clx run --jit app.clsx
-# JIT: CLS -> WASM -> wasmtime`,
+# JIT: CLS -> WASM -> wasmtime (dev)`,
 } as const;
 
 export const STDLIB_MODULES = [

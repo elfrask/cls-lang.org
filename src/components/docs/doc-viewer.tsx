@@ -155,7 +155,7 @@ export function DocViewer({ doc }: { doc: DocFile }) {
           </div>
 
           <a
-            href={`https://github.com/frask/cls/blob/main/docs/${doc.path}`}
+            href={`https://github.com/elfrask/cls/blob/main/docs/${doc.path}`}
             target="_blank"
             rel="noreferrer"
             className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"

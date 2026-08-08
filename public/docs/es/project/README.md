@@ -6,9 +6,9 @@ y como lenguaje de propósito general.
 
 ## Filosofía
 
-- **Todo es WASM**: el compilador, el runtime y las apps se compilan a WebAssembly.
+- **Propósito general**: scripting, plugins, herramientas CLI, apps y más, con un mismo lenguaje.
 - **Modular**: el core es mínimo. Los nodos extienden la funcionalidad.
-- **Host-agnóstico**: CLS puede ejecutarse en cualquier entorno que soporte WASM.
+- **Multiplataforma**: binarios nativos para cada sistema, con WASM como backend portable.
 - **Embebible**: puede ser usado como librería desde Rust, Python, JS, Go, C# y más.
 
 ## Componentes
@@ -64,6 +64,5 @@ cargo run --bin clx -- run archivo.clsx
 ## Planes futuros
 
 Ver [`docs/future/README.md`](../future/README.md) para la visión de largo plazo:
-compilación WASM (`.clbin`), runtime con JIT (Cranelift), compilación nativa (LLVM AOT)
-y FFI / interoperabilidad nativa. El enfoque actual es **WASM-first**; el resto está
-documentado para preservar el diseño.
+compilación nativa (LLVM AOT), backend WASM portable (`.clbin`) y FFI /
+interoperabilidad nativa. Cada camino está documentado para preservar el diseño.

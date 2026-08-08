@@ -1,8 +1,8 @@
 # CLS — Planes Futuros
 
 Este documento describe los desarrollos planificados para CLS a mediano y largo plazo.
-El foco actual es **WASM-first**; la compilación nativa es un camino futuro documentado aquí
-para no perder el diseño.
+El foco actual es un lenguaje de propósito general con binarios nativos; la compilación
+a WASM se mantiene como backend portable. Este documento preserva el diseño.
 
 ---
 
@@ -38,7 +38,7 @@ distribución, como `.jar`), y nativo AOT para máximo rendimiento (como `rustc`
 
 | Documento | Ruta | Contenido |
 |-----------|------|-----------|
-| WASM-first | [`wasm/WASM_PIPELINE.md`](wasm/WASM_PIPELINE.md) | Compilación a `.clbin` (WASM) |
+| Backend WASM | [`wasm/WASM_PIPELINE.md`](wasm/WASM_PIPELINE.md) | Compilación a `.clbin` (WASM) |
 | JIT en runtime | [`wasm/JIT_RUNTIME.md`](wasm/JIT_RUNTIME.md) | `clxr` con Cranelift (50-70% de C) |
 | Compilación nativa | [`native/NATIVE_AOT.md`](native/NATIVE_AOT.md) | Backend LLVM (90-100% de C) |
 | FFI e interoperabilidad | [`native/FFI.md`](native/FFI.md) | Linkeo nativo, carga de librerías |

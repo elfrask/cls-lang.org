@@ -6,8 +6,8 @@ Permitir que CLS interactúe con **código nativo** (C, C++, Rust) y viceversa.
 Esto desbloquea: linkeo de librerías nativas, carga de `.clslib` desde apps nativas,
 y comunicación bidireccional entre ecosistemas.
 
-> **Nota**: enfoque actual es WASM-first. Este documento preserva el diseño para
-> el futuro nativo, y parte de él (imports WASM) ya aplica al runtime WASM.
+> **Nota**: este documento describe el diseño de FFI nativo, y parte de él
+> (imports WASM) ya aplica al backend WASM portable.
 
 ## Direcciones de interoperabilidad
 

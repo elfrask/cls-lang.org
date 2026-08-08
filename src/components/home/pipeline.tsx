@@ -8,7 +8,7 @@ const STEPS = ["step1", "step2", "step3", "step4"] as const;
 const SNIPPETS = [
   PIPELINE_SNIPPETS.lexer,
   PIPELINE_SNIPPETS.typeck,
-  PIPELINE_SNIPPETS.wasm,
+  PIPELINE_SNIPPETS.binary,
 ] as const;
 
 export function Pipeline() {
@@ -60,7 +60,7 @@ export function Pipeline() {
               <CodeBlock
                 code={SNIPPETS[2]}
                 lang="bash"
-                title="wasm backend"
+                title="native backend"
                 showDots={false}
               />
             </div>

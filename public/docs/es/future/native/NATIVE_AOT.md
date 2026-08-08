@@ -5,9 +5,8 @@
 Compilar CLS a **binarios nativos** (`.exe`/`.so`/`.a`) vía LLVM, alcanzando
 **90-100% del rendimiento de C** — el nivel de Rust/C++.
 
-> **Nota**: este es el camino de MÁXIMO rendimiento. CLS hoy mantiene el enfoque
-> WASM-first. Este documento preserva el diseño para cuando el frontend y el
-> backend WASM estén maduros.
+> **Nota**: este es el camino de MÁXIMO rendimiento. El documento preserva el diseño
+> para cuando el frontend y el backend WASM estén maduros.
 
 ## Modelo multi-target (como Rust)
 

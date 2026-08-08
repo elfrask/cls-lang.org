@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
 import {
-  Boxes,
-  Zap,
-  Plug,
-  Box,
+  Sparkles,
+  Cpu,
+  Feather,
+  Globe,
   Package,
   FileCode2,
   type LucideIcon,
@@ -17,10 +17,10 @@ import {
 } from "@/components/ui/card";
 
 const FEATURES = [
-  { key: "wasm", icon: Boxes },
-  { key: "jit", icon: Zap },
-  { key: "ffi", icon: Plug },
-  { key: "oop", icon: Box },
+  { key: "facil", icon: Sparkles },
+  { key: "binario", icon: Cpu },
+  { key: "ligero", icon: Feather },
+  { key: "multiplataforma", icon: Globe },
   { key: "modules", icon: Package },
   { key: "cmx", icon: FileCode2 },
 ] as const;

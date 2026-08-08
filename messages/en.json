@@ -1,20 +1,22 @@
 {
   "metadata": {
-    "title": "CLS — WASM-first programming language",
-    "description": "A modular, secure and cross-platform programming language that compiles to WebAssembly. Built for scripting, plugins and general-purpose applications."
+    "title": "CLS — General-purpose programming language",
+    "description": "An easy, modular and lightweight programming language. Cross-platform by nature and compiled to native binaries."
   },
   "nav": {
     "docs": "Docs",
+    "blog": "Blog",
+    "showcase": "Showcase",
     "about": "About",
     "search": "Packages",
     "download": "Download",
     "getStarted": "Get started"
   },
   "hero": {
-    "badge": "CLS 2.0 — WASM-first",
-    "title1": "The modular language that",
-    "titleAccent": "compiles to WebAssembly",
-    "subtitle": "CLS is a modular, secure and cross-platform programming language. Scripting, plugins and general-purpose applications with a minimal core and host nodes that extend it.",
+    "badge": "CLS 2.0 — Compiles to native",
+    "title1": "The ease of the web,",
+    "titleAccent": "the speed of the metal.",
+    "subtitle": "CLS is a general-purpose programming language. Easy to use, modular and lightweight, with a minimal core and host nodes that extend it.",
     "primaryCta": "Read the docs",
     "secondaryCta": "Download CLS",
     "codeTitle": "hello.clsx",
@@ -24,36 +26,36 @@
     "terminalCmd": "clx run hello.clsx"
   },
   "features": {
-    "title": "Built for the future",
-    "subtitle": "A language with a clear philosophy: everything is WASM, the core is minimal and nodes extend the functionality.",
-    "wasm": {
-      "title": "WASM-first",
-      "description": "Compiler, runtime and apps compile to WebAssembly. Runs in any WASM-capable environment."
+    "title": "Built for everything",
+    "subtitle": "CLS combines the comfort of a modern language with the performance of native binary compilation.",
+    "facil": {
+      "title": "Easy to use",
+      "description": "Clean, predictable syntax, optional types and arrow functions. From zero to productive in a day."
     },
-    "jit": {
-      "title": "JIT with Cranelift",
-      "description": "Just-in-time execution from CLS to WASM with wasmtime. Up to ~8000x faster than the tree-walker."
+    "binario": {
+      "title": "Native binary",
+      "description": "Your code compiles to a fast, self-contained native binary with no external dependencies."
     },
-    "ffi": {
-      "title": "Native FFI",
-      "description": "Direct interop with C libraries via the `extension` directive, with dedicated ABI types."
+    "ligero": {
+      "title": "Lightweight",
+      "description": "A small runtime and a minimal binary. Ideal for scripts, plugins, CLI tools and embedded systems."
     },
-    "oop": {
-      "title": "OOP with magic methods",
-      "description": "Classes, inheritance, generics and magic methods: `__toString`, `__iter`, `__get` and more."
-    },
-    "modules": {
-      "title": "Module system",
-      "description": "Two orthogonal systems: source imports and compiled `.clslib` libraries."
+    "multiplataforma": {
+      "title": "Cross-platform",
+      "description": "The same code runs on Windows, Linux and macOS. Native compilation per platform and architecture."
     },
     "cmx": {
       "title": "Native CMX",
       "description": "JSX-like markup directly in the language to build interfaces with `CmxValue`."
+    },
+    "modules": {
+      "title": "Module system",
+      "description": "Organize your code with imports and compiled `.clslib` libraries, with multi-module type checking."
     }
   },
   "pipeline": {
     "title": "How it works",
-    "subtitle": "From source code to WebAssembly bytecode through a clear, testable pipeline.",
+    "subtitle": "From source code to native binary through a clear, testable pipeline.",
     "step1": {
       "title": "Lexer + Parser",
       "description": "Your `.clsx` code is tokenized and parsed into a serializable AST."
@@ -67,8 +69,8 @@
       "description": "AST optimizations before emission."
     },
     "step4": {
-      "title": "WASM backend",
-      "description": "WASM emission: JIT with wasmtime or `.clbin` binaries in the future."
+      "title": "Native backend",
+      "description": "Native binary emission for your platform, with JIT and WASM as a portable backend."
     }
   },
   "stdlib": {
@@ -77,12 +79,12 @@
   },
   "cta": {
     "title": "Ready to write CLS?",
-    "subtitle": "Install the CLI, create your first project and compile to WebAssembly.",
+    "subtitle": "Install the CLI, create your first project and compile to a native binary.",
     "docs": "Go to the docs",
-    "download": "Download v2.0.0"
+    "download": "Download CLS"
   },
   "footer": {
-    "tagline": "A modular, WASM-first programming language.",
+    "tagline": "A general-purpose, modular and cross-platform programming language.",
     "language": "Language",
     "project": "Project",
     "license": "MIT License",
@@ -90,11 +92,11 @@
   },
   "about": {
     "title": "About CLS",
-    "subtitle": "A modular, secure and cross-platform programming language.",
+    "subtitle": "A general-purpose language: easy to use, modular and lightweight.",
     "philosophyTitle": "Philosophy",
-    "philosophy1": "Everything is WASM: compiler, runtime and apps compile to WebAssembly.",
+    "philosophy1": "General purpose: scripting, plugins, CLI tools, apps and more, all with the same language.",
     "philosophy2": "The core is minimal; nodes (host executables) extend the functionality.",
-    "philosophy3": "Host-agnostic: runs in any WASM-capable environment.",
+    "philosophy3": "Cross-platform by nature: native binaries for every system, without heavyweight virtual machines.",
     "philosophy4": "Embeddable from Rust, Python, JS, Go, C# and more.",
     "layersTitle": "3-layer architecture",
     "layersSubtitle": "A clean separation between the language, the runtime and the host.",
@@ -126,29 +128,36 @@
   },
   "download": {
     "title": "Download CLS",
-    "subtitle": "Current version 2.0.0. Compiled to WebAssembly, available for all platforms.",
-    "version": "v2.0.0",
+    "subtitle": "Choose your platform. Native binaries for Windows, Linux and macOS, plus the source code.",
+    "version": "v2.0-dev1",
     "stable": "Stable",
+    "dev": "Dev",
+    "autoTitle": "Recommended download",
+    "autoText": "We detected your system:",
+    "autoBtn": "Download {version}",
     "windows": {
       "name": "Windows",
-      "description": "Windows 10/11 (x64) .exe installer.",
+      "description": ".msi installer for Windows 10/11 (x64).",
       "cmd": "clx.exe run app.clsx"
     },
     "linux": {
       "name": "Linux",
-      "description": "Binary for Linux (x64 and arm64).",
+      "description": ".deb package and binaries for x64 and arm64.",
       "cmd": "./clx run app.clsx"
     },
     "macos": {
       "name": "macOS",
-      "description": "Binary for macOS (Apple Silicon and Intel).",
+      "description": "Binary for Apple Silicon and Intel.",
       "cmd": "./clx run app.clsx"
     },
-    "wasi": {
-      "name": "WASI",
-      "description": "Compile your runtime to WASI to run it in any WASM environment.",
-      "cmd": "clx run --jit app.clsx"
+    "source": {
+      "name": "Source code",
+      "description": "Download the source as tar.gz and build from the repository.",
+      "cmd": "cargo build --bin clx"
     },
+    "viewAllVersions": "View all versions",
+    "downloadBtn": "Download",
+    "sourceDownloadBtn": "Source",
     "viaCargo": "Alternative: install from source",
     "viaCargoText": "CLS is written in Rust. You can build the CLI from the repository:",
     "cargoCmd": "cargo build --bin clx",
@@ -162,6 +171,54 @@
     "verifyCmd": "clx --version",
     "newCmd": "clx new hello",
     "comingSoon": "Coming soon"
+  },
+  "allVersions": {
+    "title": "All versions",
+    "subtitle": "Every CLS version, with binaries and checksums. Scroll to the bottom of the page to load more.",
+    "highlightsTitle": "Key highlights",
+    "viewDevlog": "Read the full devlog on the blog",
+    "loadMore": "Loading more versions…",
+    "noMore": "End of versions",
+    "platformCol": "Platform",
+    "typeCol": "Type",
+    "dateCol": "Date",
+    "downloadCol": "Download",
+    "noHash": "-",
+    "expand": "Expand version {version}",
+    "collapse": "Collapse version {version}",
+    "platforms": {
+      "windows": "Windows",
+      "linux": "Linux",
+      "macos": "macOS",
+      "source": "Source",
+      "web": "Web"
+    },
+    "types": {
+      "paquete": "Package",
+      "instalador": "Installer",
+      "portable": "Portable",
+      "enlace": "Link"
+    },
+    "empty": "No versions published yet."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Devlogs, news and tutorials about the project.",
+    "backToPosts": "Back to the blog",
+    "notFound": "Post not found",
+    "notFoundText": "The post you're looking for doesn't exist.",
+    "notTranslated": "This post is not translated. Showing the Spanish version.",
+    "readMore": "Read more",
+    "readTime": "{minutes} min read",
+    "publishedOn": "Published on {date}",
+    "by": "by {author}"
+  },
+  "showcase": {
+    "title": "Showcase",
+    "subtitle": "Projects built with CLS.",
+    "emptyTitle": "No projects yet",
+    "emptyText": "The showcase is coming soon. In the meantime, explore the docs and build your first project!",
+    "docsCta": "Go to the docs"
   },
   "search": {
     "title": "Packages",
