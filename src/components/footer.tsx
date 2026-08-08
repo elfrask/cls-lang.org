@@ -1,10 +1,12 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Github, Package, Heart } from "lucide-react";
 import { Logo } from "@/components/logo";
+import { getCurrentVersion } from "@/lib/releases";
 
-export function Footer() {
-  const t = useTranslations();
+export async function Footer({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale });
+  const current = getCurrentVersion();
 
   return (
     <footer className="border-t border-border/60 bg-background/50">
@@ -19,9 +21,11 @@ export function Footer() {
               {t("footer.tagline")}
             </p>
             <span className="mt-4 inline-flex items-center gap-1.5 rounded-full glass px-3 py-1 text-xs text-muted-foreground">
-              v2.0.0
+              {current ? `v${current.version}` : t("download.version")}
               <span className="size-1.5 rounded-full bg-primary" />
-              {t("download.stable")}
+              {current?.channel === "release"
+                ? t("download.stable")
+                : t("download.dev")}
             </span>
           </div>
 
@@ -31,9 +35,9 @@ export function Footer() {
               {(
                 [
                   ["/docs", "nav.docs"],
+                  ["/blog", "nav.blog"],
                   ["/about", "nav.about"],
                   ["/download", "nav.download"],
-                  ["/search", "nav.search"],
                 ] as const
               ).map(([href, key]) => (
                 <li key={href}>
@@ -53,7 +57,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li>
                 <a
-                  href="https://github.com/frask/cls"
+                  href="https://github.com/elfrask/cls"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"

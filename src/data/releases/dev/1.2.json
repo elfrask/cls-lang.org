@@ -1,0 +1,23 @@
+{
+  "version": "1.2",
+  "channel": "dev",
+  "released": "2025-11-20",
+  "notes": "Reimplementación de CLS en Cython, abandonada en favor de la implementación 2.0 en Rust.",
+  "highlights": [
+    "Reimplementación en Cython para acelerar el intérprete",
+    "Proyecto abandonado en favor de la implementación 2.0 en Rust"
+  ],
+  "blog": "",
+  "assets": [
+    {
+      "filename": "cls-1.2-source.link",
+      "platform": "source",
+      "arch": "all",
+      "format": "link",
+      "type": "enlace",
+      "size": "-",
+      "date": "2025-11-20",
+      "url": "https://github.com/elfrask/cls/tree/1.2"
+    }
+  ]
+}

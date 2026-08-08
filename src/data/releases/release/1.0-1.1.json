@@ -1,0 +1,24 @@
+{
+  "version": "1.0-1.1",
+  "channel": "release",
+  "released": "2025-06-10",
+  "notes": "Primera implementación de CLS, escrita en Python.",
+  "highlights": [
+    "Primera implementación de CLS, escrita en Python",
+    "Lenguaje de scripting con intérprete tree-walker",
+    "Sintaxis y funcionalidad base del lenguaje"
+  ],
+  "blog": "",
+  "assets": [
+    {
+      "filename": "cls-1.0-1.1-source.link",
+      "platform": "source",
+      "arch": "all",
+      "format": "link",
+      "type": "enlace",
+      "size": "-",
+      "date": "2025-06-10",
+      "url": "https://github.com/elfrask/cls/tree/1.0-1.1"
+    }
+  ]
+}

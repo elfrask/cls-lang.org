@@ -7,12 +7,12 @@ export type PackageInfo = {
 };
 
 const PLACEHOLDER_PACKAGES: PackageInfo[] = [
-  { name: "core", version: "2.0.0" },
-  { name: "math", version: "2.0.0" },
-  { name: "json", version: "2.0.0" },
-  { name: "async", version: "2.0.0" },
-  { name: "fs", version: "2.0.0" },
-  { name: "http", version: "2.0.0" },
+  { name: "core", version: "2.0-dev1" },
+  { name: "math", version: "2.0-dev1" },
+  { name: "json", version: "2.0-dev1" },
+  { name: "async", version: "2.0-dev1" },
+  { name: "fs", version: "2.0-dev1" },
+  { name: "http", version: "2.0-dev1" },
 ];
 
 export async function GET(req: NextRequest) {

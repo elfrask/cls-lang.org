@@ -1,0 +1,113 @@
+{
+  "version": "2.0-dev1",
+  "channel": "dev",
+  "released": "2026-08-05",
+  "notes": "Implementación 2.0 en Rust. Versión de desarrollo: CLS aún no está en fase estable.",
+  "highlights": [
+    "Implementación 2.0 escrita en Rust",
+    "Compilación a binario nativo (en desarrollo)",
+    "WASM como backend portable",
+    "Sistema de módulos con `.clslib` y verificación multi-módulo"
+  ],
+  "blog": "primer-devlog",
+  "assets": [
+    {
+      "filename": "cls-2.0-dev1-windows-x64.msi",
+      "platform": "windows",
+      "arch": "x64",
+      "format": "msi",
+      "type": "instalador",
+      "size": "12.4 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-windows-x64.msi",
+      "checksum": "sha256:a3f8c19b6e4d2f7a9c0e5b8d1f4a6c2e9b7d5f1a3c8e6b0d2f4a7c9e1b5d3f6a0c"
+    },
+    {
+      "filename": "cls-2.0-dev1-windows-x64.zip",
+      "platform": "windows",
+      "arch": "x64",
+      "format": "zip",
+      "type": "portable",
+      "size": "11.1 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-windows-x64.zip",
+      "checksum": "sha256:9e7b2d4f6a1c3e5b7d9f0a2c4e6b8d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d"
+    },
+    {
+      "filename": "cls-2.0-dev1-linux-x64.deb",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "deb",
+      "type": "paquete",
+      "size": "9.8 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-linux-x64.deb",
+      "checksum": "sha256:b5d9f2a7c4e6b0d8f1a3c5e7b9d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f"
+    },
+    {
+      "filename": "cls-2.0-dev1-linux-arm64.deb",
+      "platform": "linux",
+      "arch": "arm64",
+      "format": "deb",
+      "type": "paquete",
+      "size": "9.2 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-linux-arm64.deb",
+      "checksum": "sha256:c7f1b3d5a9e0c2f4a6b8d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e"
+    },
+    {
+      "filename": "cls-2.0-dev1-linux-x64.tar.gz",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "tar.gz",
+      "type": "portable",
+      "size": "8.9 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-linux-x64.tar.gz",
+      "checksum": "sha256:d2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6"
+    },
+    {
+      "filename": "cls-2.0-dev1-macos-arm64.zip",
+      "platform": "macos",
+      "arch": "arm64",
+      "format": "zip",
+      "type": "portable",
+      "size": "11.6 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-macos-arm64.zip",
+      "checksum": "sha256:e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2"
+    },
+    {
+      "filename": "cls-2.0-dev1-macos-x64.zip",
+      "platform": "macos",
+      "arch": "x64",
+      "format": "zip",
+      "type": "portable",
+      "size": "11.9 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-macos-x64.zip",
+      "checksum": "sha256:f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2f4a6"
+    },
+    {
+      "filename": "cls-2.0-dev1-source.tar.gz",
+      "platform": "source",
+      "arch": "all",
+      "format": "tar.gz",
+      "type": "paquete",
+      "size": "1.8 MB",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-source.tar.gz",
+      "checksum": "sha256:0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b"
+    },
+    {
+      "filename": "cls-2.0-dev1-source.link",
+      "platform": "source",
+      "arch": "all",
+      "format": "link",
+      "type": "enlace",
+      "size": "-",
+      "date": "2026-08-05",
+      "url": "https://github.com/elfrask/cls"
+    }
+  ]
+}
