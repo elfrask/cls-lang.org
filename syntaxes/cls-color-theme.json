@@ -151,6 +151,140 @@
       "name": "Comentarios CLS",
       "scope": [ "comment.line.number-sign.ccls" ],
       "settings": { "foreground": "#6a9955", "fontStyle": "italic" }
+    },
+    {
+      "name": "Genéricos: comentarios",
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.documentation"
+      ],
+      "settings": { "foreground": "#6a9955", "fontStyle": "italic" }
+    },
+    {
+      "name": "Genéricos: strings",
+      "scope": [
+        "string",
+        "string.quoted",
+        "string.quoted.double",
+        "string.quoted.single",
+        "string.quoted.other",
+        "string.template",
+        "string.other"
+      ],
+      "settings": { "foreground": "#ce9178" }
+    },
+    {
+      "name": "Genéricos: keywords",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.other",
+        "keyword.declaration",
+        "keyword.import",
+        "storage.modifier"
+      ],
+      "settings": { "foreground": "#c586c0" }
+    },
+    {
+      "name": "Genéricos: tipos",
+      "scope": [
+        "storage.type",
+        "support.type",
+        "support.type.primitive",
+        "entity.name.type",
+        "entity.name.class"
+      ],
+      "settings": { "foreground": "#4ec9b0" }
+    },
+    {
+      "name": "Genéricos: funciones",
+      "scope": [
+        "entity.name.function",
+        "entity.name.function.method",
+        "entity.name.function.call",
+        "support.function",
+        "support.function.builtin"
+      ],
+      "settings": { "foreground": "#dcdcaa" }
+    },
+    {
+      "name": "Genéricos: constantes y números",
+      "scope": [
+        "constant",
+        "constant.numeric",
+        "constant.other",
+        "constant.language",
+        "constant.character"
+      ],
+      "settings": { "foreground": "#b5cea8" }
+    },
+    {
+      "name": "Genéricos: booleanos y null",
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.null",
+        "constant.language.none",
+        "constant.language.undefined"
+      ],
+      "settings": { "foreground": "#f9e2af" }
+    },
+    {
+      "name": "Genéricos: variables",
+      "scope": [
+        "variable",
+        "variable.other",
+        "variable.parameter",
+        "variable.language",
+        "support.variable"
+      ],
+      "settings": { "foreground": "#9cdcfe" }
+    },
+    {
+      "name": "Genéricos: propiedades y keys",
+      "scope": [
+        "support.type.property-name",
+        "variable.other.property",
+        "entity.name",
+        "entity.other.property-name"
+      ],
+      "settings": { "foreground": "#9cdcfe" }
+    },
+    {
+      "name": "Genéricos: tags",
+      "scope": [
+        "entity.name.tag",
+        "punctuation.definition.tag",
+        "meta.tag"
+      ],
+      "settings": { "foreground": "#e06c75" }
+    },
+    {
+      "name": "Genéricos: atributos",
+      "scope": [
+        "entity.other.attribute-name",
+        "attribute-name"
+      ],
+      "settings": { "foreground": "#d19a66", "fontStyle": "italic" }
+    },
+    {
+      "name": "Genéricos: puntuación",
+      "scope": [
+        "punctuation",
+        "punctuation.separator",
+        "punctuation.definition",
+        "punctuation.section"
+      ],
+      "settings": { "foreground": "#e0af68" }
+    },
+    {
+      "name": "Genéricos: operadores",
+      "scope": [
+        "keyword.operator",
+        "operator"
+      ],
+      "settings": { "foreground": "#d19a66" }
     }
   ]
 }
