@@ -72,13 +72,41 @@ La 1.2 llegó a tener un frontend bastante completo, pero **nunca se terminó**:
 - El REPL heredado de la 1.0–1.1 quedó roto porque referenciaba módulos que ya
   no existían en el motor nuevo.
 
+Pero lo que terminó de hundir al proyecto no fue solo lo que faltaba por
+escribir: fue un problema de fondo con la tecnología elegida.
+
+## El problema de la portabilidad
+
+La reescritura en **Cython** resolvía el rendimiento, pero chocaba con algo
+que para CLS siempre fue central: **la portabilidad**. Un motor compilado con
+Cython queda atado a la arquitectura para la que se compiló — el binario se
+construye y enlaza para una plataforma y un procesador concretos, y moverlo a
+otro sistema requiere recompilar todo desde cero, con toda su cadena de
+dependencias nativas. En otras palabras: un `.so`/`.pyd` de Windows no sirve
+en Linux, un binario de x86_64 no sirve en ARM, y mantener el soporte para
+varias plataformas a la vez se volvía una tarea enorme.
+
+Eso era un problema serio para un lenguaje que por diseño quería ser
+**multiplataforma por naturaleza**. La 1.0–1.1, con su transpilador a Python,
+se ejecutaba en cualquier sitio donde hubiera Python; la 1.2 en Cython se
+estaba condenando a ser un lenguaje de una sola máquina a la vez, y cada
+distribución multiplataforma exigía un ecosistema de compilación nativo (MSVC,
+GCC, la caché de `sccache`, el `setup.py`...) que además nunca llegó a
+completarse.
+
+La lección fue clara: el camino hacia un CLS rápido no podía sacrificar lo que
+hacía especial al lenguaje — correr en todas partes. Esa fue, en última
+instancia, la razón por la que la 1.2 se detuvo.
+
 ## El siguiente paso
 
 La reescritura en Cython demostró que valía la pena partir de cero, pero el
-camino hacia un runtime completo seguía siendo enorme. La decisión final fue
+camino hacia un runtime completo seguía siendo enorme. Y la decisión final fue
 empezar de nuevo una vez más, esta vez en **Rust**, con una visión más amplia:
-no solo un frontend rápido, sino un pipeline completo hasta el binario nativo.
-Eso es lo que hoy conocemos como CLS 2.0, y lo contamos en
+no solo un frontend rápido, sino un pipeline completo hasta el **binario
+nativo** para cada plataforma y arquitectura — Windows, Linux y macOS —, que
+resolviera la portabilidad que Cython dejó sin respuesta. Eso es lo que hoy
+conocemos como CLS 2.0, y lo contamos en
 [el primer devlog de la 2.0](/blog/primer-devlog).
 
 ---

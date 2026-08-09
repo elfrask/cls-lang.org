@@ -12,7 +12,7 @@
       "title": "Devlog: CLS 1.2, la reescritura en Cython",
       "date": "2025-11-20",
       "author": "Equipo CLS",
-      "excerpt": "El intento de resolver los tiempos de compilación reescribiendo CLS desde cero en Cython, y por qué el proyecto quedó a mitad de camino."
+      "excerpt": "El intento de resolver los tiempos de compilación reescribiendo CLS desde cero en Cython, por qué la portabilidad limitada de los binarios nativos terminó con el proyecto y la lección que llevó a la 2.0."
     },
     {
       "slug": "devlog-1-0-1-1",

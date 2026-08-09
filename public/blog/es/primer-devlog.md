@@ -28,7 +28,9 @@ Antes de la 2.0, el lenguaje pasó por dos etapas que conviene recordar:
 - **1.2** (noviembre 2025): un intento de reescritura **desde cero en Cython**
   para atacar el rendimiento. Se construyó un frontend completo (lexer, parser y
   estructuración con tipos C estáticos), pero **nunca llegó a tener evaluador**:
-  el proyecto quedó a mitad de camino. Lo detallamos en
+  el proyecto se detuvo por los problemas de **portabilidad** que imponía
+  Cython (binarios atados a plataforma y arquitectura, difíciles de distribuir
+  multiplataforma). Lo detallamos en
   [el devlog de la 1.2](/blog/devlog-1-2).
 
 La 2.0 nace de esa historia: conserva la ambición de la 1.0–1.1, toma la
