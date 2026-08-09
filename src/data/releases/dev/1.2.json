@@ -7,7 +7,7 @@
     "Reimplementación en Cython para acelerar el intérprete",
     "Proyecto abandonado en favor de la implementación 2.0 en Rust"
   ],
-  "blog": "",
+  "blog": "devlog-1-2",
   "assets": [
     {
       "filename": "cls-1.2-source.link",
