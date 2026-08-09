@@ -211,7 +211,13 @@
     "readMore": "Read more",
     "readTime": "{minutes} min read",
     "publishedOn": "Published on {date}",
-    "by": "by {author}"
+    "by": "by {author}",
+    "searchPlaceholder": "Search posts…",
+    "clearSearch": "Clear search",
+    "noResultsTitle": "No results",
+    "noResultsText": "No posts match “{query}”.",
+    "loadMore": "Loading more posts…",
+    "noMore": "End of posts"
   },
   "showcase": {
     "title": "Showcase",

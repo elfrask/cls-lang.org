@@ -211,7 +211,13 @@
     "readMore": "Leer más",
     "readTime": "{minutes} min de lectura",
     "publishedOn": "Publicado el {date}",
-    "by": "por {author}"
+    "by": "por {author}",
+    "searchPlaceholder": "Buscar entradas…",
+    "clearSearch": "Limpiar búsqueda",
+    "noResultsTitle": "Sin resultados",
+    "noResultsText": "No hay entradas que coincidan con «{query}».",
+    "loadMore": "Cargando más entradas…",
+    "noMore": "Fin de las entradas"
   },
   "showcase": {
     "title": "Showcase",
