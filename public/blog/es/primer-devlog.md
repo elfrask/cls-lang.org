@@ -15,10 +15,15 @@ está pensado para scripting, plugins, herramientas CLI y aplicaciones de todo t
 
 Antes de la 2.0, el lenguaje pasó por dos etapas que conviene recordar:
 
-- **1.0–1.1** (junio 2025): la primera implementación, escrita en Python. Era un
+- **1.0–1.1** (junio 2025): la primera versión oficial y numerada del lenguaje,
+  escrita en Python. Era un
   transpilador que generaba código Python y lo ejecutaba con `exec()`. Muy
   completo en sintaxis (módulos, clases, CMX, stdlib...), pero con **tiempos de
-  compilación muy grandes** incluso en archivos pequeños. Contamos su historia
+  compilación muy grandes** incluso en archivos pequeños. Aunque fue la
+  primera versión "pública", no fue la primera implementación: antes hubo
+  prototipos en [Batch](/blog/devlog-origenes-batch), las primeras
+  [implementaciones en Python](/blog/devlog-primeras-python) y un motor en
+  [JavaScript](/blog/devlog-clsjs). Contamos su historia
   en [el devlog de la 1.0–1.1](/blog/devlog-1-0-1-1).
 - **1.2** (noviembre 2025): un intento de reescritura **desde cero en Cython**
   para atacar el rendimiento. Se construyó un frontend completo (lexer, parser y

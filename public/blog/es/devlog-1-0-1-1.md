@@ -1,18 +1,25 @@
-# Devlog: CLS 1.0–1.1, el origen del lenguaje
+# Devlog: CLS 1.0–1.1, la versión que consolidó el lenguaje
 
 *Publicado el 2025-06-10 por Equipo CLS*
 
-Esta es la primera entrada de la serie. Hoy vamos a mirar hacia atrás: a las
-versiones 1.0 y 1.1, donde todo empezó. CLS nació como un lenguaje hobby, pero
-poco a poco se convirtió en el proyecto más ambicioso de su autor.
+Hoy toca hablar de las versiones 1.0 y 1.1. Pero antes, una aclaración que nos
+debíamos: **no fueron la primera implementación de CLS**. Para cuando empezaron
+a escribirse, el lenguaje ya había pasado por una larga serie de exploraciones
+previas — el prototipo en [Batch](/blog/devlog-origenes-batch), las primeras
+[implementaciones en Python](/blog/devlog-primeras-python) y el motor en
+[JavaScript](/blog/devlog-clsjs). La 1.0 fue la primera versión **oficial y
+numerada**, el punto donde el proyecto dejó de ser una serie de intentos y se
+convirtió en algo que se podía versionar, publicar y usar.
 
 ## El punto de partida
 
-CLS comenzó como un proyecto personal, escrito **en Python**. El propio README
-de esa época lo decía: *"it is a programming language created for me as hobby in
-his startings. but with the time this be convert in my project more ambitious"*.
-El arranque del CLI lo resumía bien: *"Cls 1.1.1 - Build for win32 platforms,
-CLS 2016-2025"*, bajo la marca *Vinestar Studio*.
+CLS era entonces un proyecto personal, escrito **en Python**, que ya arrastraba
+años de evolución. El propio README de esa época lo decía: *"it is a
+programming language created for me as hobby in his startings. but with the
+time this be convert in my project more ambitious"*. El arranque del CLI lo
+resumía bien: *"Cls 1.1.1 - Build for win32 platforms, CLS 2016-2025"*, bajo la
+marca *Vinestar Studio*. Fíjate en el "2016-2025": la fecha de inicio miraba
+muy atrás, a aquellos primeros prototipos.
 
 ## Cómo funcionaba el motor
 
@@ -27,6 +34,11 @@ etapas:
 4. `generator` — emite el código Python equivalente.
 5. `jump` — une todo con la indentación correcta.
 6. `exec` — ejecuta el Python generado.
+
+No es casualidad que esos nombres te suenen: los heredó del motor
+**CLSJS** en JavaScript, que ya usaba la misma pipeline
+(`desline → parselex → estructuration → generator → jump → exec`). La 1.0–1.1
+fue el regreso a Python con todo lo aprendido en el camino.
 
 Las variables CLS se renombraban con el prefijo `var_` para no chocar con el
 código generado, y la verificación de tipos se hacía en tiempo de ejecución.
@@ -71,8 +83,8 @@ La 1.0–1.1 fue también una época de muchos experimentos:
 
 - **Casm**: un lenguaje tipo ensamblador con su propia VM de memoria lineal, que
   compilaba a `.cobj` o JSON.
-- **CLSJS**: un puerto del motor completo a JavaScript (~2600 líneas), con su
-  propio servidor y ejecución en el navegador.
+- **CLSJS**: el puerto del motor a JavaScript que ya contamos en su propio
+  [devlog](/blog/devlog-clsjs) — vivió dentro de este mismo repositorio.
 - **Godot**: un transpilador de CLS a GDScript, con un juego de ejemplo.
 - **CPKG**: un gestor de paquetes con cuenta de desarrollador y plantillas.
 - **Brython**: experimentos para correr CLS directamente en la web.
@@ -89,5 +101,6 @@ el siguiente devlog.
 
 ---
 
-*Versiones: [CLS 1.0–1.1](https://github.com/elfrask/cls/tree/1.0-1.1) · Siguiente:
+*Anterior: [CLSJS, el motor en JavaScript](/blog/devlog-clsjs) · Versiones:
+[CLS 1.0–1.1](https://github.com/elfrask/cls/tree/1.0-1.1) · Siguiente:
 [CLS 1.2, la reescritura en Cython](/blog/devlog-1-2).*

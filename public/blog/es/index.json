@@ -16,10 +16,10 @@
     },
     {
       "slug": "devlog-1-0-1-1",
-      "title": "Devlog: CLS 1.0–1.1, el origen del lenguaje",
+      "title": "Devlog: CLS 1.0–1.1, la versión que consolidó el lenguaje",
       "date": "2025-06-10",
       "author": "Equipo CLS",
-      "excerpt": "Cómo empezó CLS: la primera implementación en Python, su motor transpilador, el lenguaje con módulos, clases y CMX, y los experimentos que lo rodearon."
+      "excerpt": "La primera versión oficial y numerada de CLS: su motor transpilador en Python, el lenguaje con módulos, clases y CMX, los experimentos que lo rodearon — y por qué no fue la primera implementación del lenguaje."
     },
     {
       "slug": "devlog-clsjs",

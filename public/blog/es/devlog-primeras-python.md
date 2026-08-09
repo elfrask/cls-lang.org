@@ -155,7 +155,7 @@ fub main() {
 ```
 
 Un detalle curioso: el `meta.pyon` de `cls_py` menciona una *edition* llamada
-**"Plix-Compiler"** con autor "Carlos Pages" y compañía "SmallSoftWare" — el
+**"Plix-Compiler"** con autor "Hitako" y compañía "SmallSoftWare" — el
 seudónimo de la época. Y su metadato guarda una fecha: **15/9/2019**. Esa es
 la huella que nos dice cuándo se escribió esta versión.
 

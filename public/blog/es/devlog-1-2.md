@@ -84,4 +84,4 @@ Eso es lo que hoy conocemos como CLS 2.0, y lo contamos en
 ---
 
 *Versión: [CLS 1.2](https://github.com/elfrask/cls/tree/1.2) · Anterior:
-[CLS 1.0–1.1, el origen del lenguaje](/blog/devlog-1-0-1-1).*
+[CLS 1.0–1.1, la versión que consolidó el lenguaje](/blog/devlog-1-0-1-1).*
