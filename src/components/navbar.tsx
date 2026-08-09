@@ -13,7 +13,7 @@ const NAV_ITEMS = [
   { href: "/docs", key: "nav.docs" },
   { href: "/blog", key: "nav.blog" },
   { href: "/showcase", key: "nav.showcase" },
-  { href: "/socials", key: "nav.socials" },
+  { href: "/comunidad", key: "nav.community" },
   { href: "/about", key: "nav.about" },
   { href: "/search", key: "nav.search" },
   { href: "/download", key: "nav.download" },

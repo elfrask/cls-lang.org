@@ -7,7 +7,7 @@
     "docs": "Docs",
     "blog": "Blog",
     "showcase": "Showcase",
-    "socials": "Socials",
+    "community": "Comunidad",
     "about": "Acerca",
     "search": "Paquetes",
     "download": "Descargar",
@@ -231,8 +231,8 @@
     "emailCta": "Contactar al autor",
     "docsCta": "Ir a la documentación"
   },
-  "socials": {
-    "title": "Redes sociales",
+  "community": {
+    "title": "Comunidad",
     "subtitle": "Únete a la comunidad de CLS y sigue el desarrollo del lenguaje.",
     "github": {
       "name": "GitHub",

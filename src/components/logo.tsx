@@ -4,7 +4,7 @@ export function Logo({ className }: { className?: string }) {
   
   return (
     <img 
-      className="size-8" 
+      className={cn("size-8", className)} 
       src={"/icon.svg"} 
     />
   )

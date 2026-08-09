@@ -9,7 +9,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 
-const SOCIALS = [
+const COMMUNITY = [
   {
     key: "github",
     href: "https://github.com/elfrask/cls",
@@ -22,12 +22,12 @@ const SOCIALS = [
   },
 ] as const;
 
-export default async function SocialsPage({
+export default async function CommunityPage({
   params,
-}: PageProps<"/[locale]/socials">) {
+}: PageProps<"/[locale]/comunidad">) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "socials" });
+  const t = await getTranslations({ locale, namespace: "community" });
 
   return (
     <section className="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 pb-20 pt-16 sm:px-6">
@@ -42,7 +42,7 @@ export default async function SocialsPage({
       </Reveal>
 
       <div className="mx-auto mt-12 grid w-full max-w-3xl gap-4 sm:grid-cols-2">
-        {SOCIALS.map((social, i) => {
+        {COMMUNITY.map((social, i) => {
           const Icon = social.icon;
           return (
             <Reveal key={social.key} delay={i * 0.08}>
