@@ -1,10 +1,10 @@
 import { useTranslations } from "next-intl";
 import {
   Sparkles,
-  Cpu,
+  ShieldCheck,
   Feather,
   Globe,
-  Package,
+  Plug,
   FileCode2,
   type LucideIcon,
 } from "lucide-react";
@@ -18,10 +18,10 @@ import {
 
 const FEATURES = [
   { key: "facil", icon: Sparkles },
-  { key: "binario", icon: Cpu },
+  { key: "tipado", icon: ShieldCheck },
   { key: "ligero", icon: Feather },
   { key: "multiplataforma", icon: Globe },
-  { key: "modules", icon: Package },
+  { key: "ffi", icon: Plug },
   { key: "cmx", icon: FileCode2 },
 ] as const;
 

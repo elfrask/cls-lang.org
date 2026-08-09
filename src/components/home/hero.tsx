@@ -19,7 +19,7 @@ export function Hero() {
         <div className="absolute right-[10%] top-[30%] h-[300px] w-[300px] rounded-full bg-[#cba6f7]/10 blur-[100px]" />
       </div>
 
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 pb-24 pt-16 sm:px-6 lg:grid-cols-2 lg:pt-24">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-2 lg:pb-20 lg:pt-14">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,16 +30,16 @@ export function Hero() {
             {t("hero.badge")}
           </span>
 
-          <h1 className="mt-6 text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {t("hero.title1")}{" "}
             <span className="text-gradient">{t("hero.titleAccent")}</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-pretty text-muted-foreground sm:text-lg">
+          <p className="mt-5 max-w-lg text-pretty text-muted-foreground sm:text-lg">
             {t("hero.subtitle")}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-7 flex flex-wrap items-center gap-3">
             <Button size="lg" asChild>
               <Link href="/docs">
                 {t("hero.primaryCta")}
@@ -67,9 +67,7 @@ export function Hero() {
             className="-mt-3 ml-6 w-[calc(100%-3rem)]"
             lines={[
               { text: `${t("hero.terminalUser")}@${t("hero.terminalHost")}: ~ $ ${t("hero.terminalCmd")}`, prompt: false },
-              { text: "Hello from CLS!", prompt: false },
-              { text: "Hola, soy CLS (Alto)!", prompt: false },
-              { text: "sqrt(16) = 4.0", prompt: false },
+              { text: "Hola, soy CLS!", prompt: false },
               { text: "exit code 0", prompt: false },
             ]}
           />

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "CLS — Lenguaje de programación de propósito general",
-    "description": "Lenguaje de programación fácil, modular y ligero. Multiplataforma por naturaleza y compilado a binario nativo."
+    "description": "Lenguaje de tipado estático con intérprete JIT que corre a la velocidad de C y Rust. Fácil, modular y multiplataforma por naturaleza."
   },
   "nav": {
     "docs": "Docs",
@@ -14,10 +14,10 @@
     "getStarted": "Empezar"
   },
   "hero": {
-    "badge": "CLS 2.0 — Compila a binario",
+    "badge": "CLS 2.0 — Tipado estático",
     "title1": "La facilidad de la web,",
     "titleAccent": "la velocidad del metal.",
-    "subtitle": "CLS es un lenguaje de programación de propósito general. Fácil de usar, modular y ligero, con un núcleo mínimo y nodos host que lo extienden.",
+    "subtitle": "CLS es un lenguaje de programación de propósito general, de tipado estático, con un intérprete JIT que corre a la velocidad de C y Rust. Sintaxis limpia, multiplataforma y extensible con código nativo.",
     "primaryCta": "Leer la documentación",
     "secondaryCta": "Descargar CLS",
     "codeTitle": "hola.clsx",
@@ -28,14 +28,14 @@
   },
   "features": {
     "title": "Hecho para todo",
-    "subtitle": "CLS combina la comodidad de un lenguaje moderno con el rendimiento de la compilación a binario nativo.",
+    "subtitle": "CLS combina la comodidad de un lenguaje moderno con el rendimiento de un intérprete JIT que corre a la velocidad de C y Rust.",
     "facil": {
-      "title": "Fácil de usar",
-      "description": "Sintaxis limpia y predecible, tipos opcionales y funciones flecha. De cero a productivo en un día."
+      "title": "Sintaxis limpia",
+      "description": "Sintaxis clara y predecible, funciones flecha y tipos opcionales. De cero a productivo en un día."
     },
-    "binario": {
-      "title": "Binario nativo",
-      "description": "Tu código se compila a un binario nativo rápido y autónomo, sin dependencias externas."
+    "tipado": {
+      "title": "Tipado estático",
+      "description": "Verificación de tipos en tiempo de compilación, TypeScript-style. El dinamismo solo existe si lo declaras con `any`."
     },
     "ligero": {
       "title": "Ligero",
@@ -45,42 +45,38 @@
       "title": "Multiplataforma",
       "description": "Un mismo código corre en Windows, Linux y macOS. Compilación nativa por plataforma y arquitectura."
     },
+    "ffi": {
+      "title": "Interoperabilidad",
+      "description": "Bindings para otros lenguajes y extensiones para cargar código nativo directamente desde CLS."
+    },
     "cmx": {
       "title": "CMX nativo",
-      "description": "Marcado tipo JSX directamente en el lenguaje para construir interfaces con `CmxValue`."
-    },
-    "modules": {
-      "title": "Sistema de módulos",
-      "description": "Organiza tu código con imports y librerías compiladas `.clslib`, con verificación de tipos multi-módulo."
+      "description": "Maquetación desde código: marcado tipo JSX en el propio lenguaje para construir interfaces con `CmxValue`."
     }
   },
   "pipeline": {
     "title": "Cómo funciona",
-    "subtitle": "Del código fuente al binario nativo a través de un pipeline claro y comprobable.",
+    "subtitle": "Del código fuente a la ejecución a través de un pipeline claro y comprobable.",
     "step1": {
       "title": "Lexer + Parser",
       "description": "Tu código `.clsx` se tokeniza y parsea a un AST serializable."
     },
     "step2": {
       "title": "Type checker",
-      "description": "Verificación de tipos TypeScript-style con uniones, genéricos y literales."
+      "description": "Verificación de tipos estática, TypeScript-style con uniones, genéricos y literales."
     },
     "step3": {
       "title": "Optimizer",
-      "description": "Optimizaciones de AST antes de la emisión."
+      "description": "Optimizaciones de AST antes de la ejecución."
     },
     "step4": {
-      "title": "Backend binario",
-      "description": "Emisión de binario nativo para tu plataforma, con JIT y WASM como backend portable."
+      "title": "Intérprete JIT",
+      "description": "Un intérprete JIT que corre a la velocidad de C y Rust. La compilación a binario nativo está en desarrollo."
     }
-  },
-  "stdlib": {
-    "title": "Biblioteca estándar",
-    "subtitle": "Módulos compactos y enfocados que cubren las necesidades del día a día."
   },
   "cta": {
     "title": "¿Listo para escribir CLS?",
-    "subtitle": "Instala el CLI, crea tu primer proyecto y compila a binario nativo.",
+    "subtitle": "Instala el CLI, crea tu primer proyecto y ejecuta CLS a la velocidad de C y Rust.",
     "docs": "Ir a la documentación",
     "download": "Descargar CLS"
   },
@@ -93,34 +89,34 @@
   },
   "about": {
     "title": "Acerca de CLS",
-    "subtitle": "Un lenguaje de propósito general: fácil de usar, modular y ligero.",
+    "subtitle": "Un lenguaje de propósito general, de tipado estático, con un intérprete JIT que corre a la velocidad de C y Rust.",
     "philosophyTitle": "Filosofía",
     "philosophy1": "Propósito general: scripting, plugins, herramientas CLI, apps y más, con un mismo lenguaje.",
-    "philosophy2": "El núcleo es mínimo; los nodos (ejecutables host) extienden la funcionalidad.",
-    "philosophy3": "Multiplataforma por naturaleza: binarios nativos para cada sistema, sin máquinas virtuales pesadas.",
-    "philosophy4": "Embebible desde Rust, Python, JS, Go, C# y más.",
+    "philosophy2": "Tipado estático de base: verificación en tiempo de compilación, con `any` como única salida dinámica.",
+    "philosophy3": "Multiplataforma por naturaleza: un mismo código corre en Windows, Linux y macOS, sin máquinas virtuales pesadas.",
+    "philosophy4": "Extensible: bindings para otros lenguajes, carga de código nativo y nodos host que implementa la comunidad.",
     "layersTitle": "Arquitectura de 3 capas",
-    "layersSubtitle": "Una separación limpia entre el lenguaje, la ejecución y el host.",
+    "layersSubtitle": "Una separación limpia entre el lenguaje, la ejecución y el host — pensada para que desarrolles tus propios nodos.",
     "layer1": {
       "title": "cls-core",
-      "description": "El lenguaje: lexer, parser, type checker, optimizer y backends. Agnóstico del entorno."
+      "description": "El lenguaje: lexer, parser, type checker, optimizer y el intérprete JIT. Agnóstico del entorno."
     },
     "layer2": {
       "title": "cls-runtime",
-      "description": "La ejecución: intérprete tree-walker, valores, stdlib, GC y VFS con sandbox."
+      "description": "La ejecución: intérprete JIT, valores, stdlib, GC y VFS con sandbox."
     },
     "layer3": {
       "title": "nodos",
-      "description": "Los hosts: clx (CLI de desarrollo) y clxr (runtime ligero). Proveen FS, red, CLI y config."
+      "description": "Los hosts: clx (CLI de desarrollo) y clxr (runtime ligero). Implementa el tuyo para integrar CLS donde quieras: FS, red, CLI, config y más."
     },
     "roadmapTitle": "Roadmap",
-    "roadmapSubtitle": "Del intérprete tree-walker a la compilación nativa.",
-    "f1": "Workspace + crates + nodos base",
-    "f2": "Pipeline lexer → parser → tree-walker",
-    "f3": "Type checker + name resolver + optimizer",
-    "f4": "Stdlib: math, json, fs, http, intrinsics",
-    "f5": "ModuleResolver + imports + exports + user modules",
-    "f6": "Migración ccls→clx, .ccls→.clsx",
+    "roadmapSubtitle": "Lo que ya está logrado y lo que viene.",
+    "f1": "Intérprete JIT a la velocidad de C y Rust — logrado.",
+    "f2": "Type checker estático + name resolver + optimizer — logrado.",
+    "f3": "Backend nativo AOT: binario por plataforma y arquitectura — en desarrollo.",
+    "f4": "Stdlib: módulos del sistema e intrinsics, aún por definir.",
+    "f5": "Módulos, imports, exports y módulos de usuario.",
+    "f6": "Migración ccls→clx, .ccls→.clsx.",
     "extra": "LSP + extensión VS Code + type maps + async/await + CMX + errores con trace",
     "jit": "JIT (CLS → WASM → wasmtime) vía `clx run --jit`",
     "repoTitle": "El código",

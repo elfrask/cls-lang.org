@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "CLS — General-purpose programming language",
-    "description": "An easy, modular and lightweight programming language. Cross-platform by nature and compiled to native binaries."
+    "description": "A statically typed language with a JIT interpreter that runs at the speed of C and Rust. Easy, modular and cross-platform by nature."
   },
   "nav": {
     "docs": "Docs",
@@ -14,10 +14,10 @@
     "getStarted": "Get started"
   },
   "hero": {
-    "badge": "CLS 2.0 — Compiles to native",
+    "badge": "CLS 2.0 — Statically typed",
     "title1": "The ease of the web,",
     "titleAccent": "the speed of the metal.",
-    "subtitle": "CLS is a general-purpose programming language. Easy to use, modular and lightweight, with a minimal core and host nodes that extend it.",
+    "subtitle": "CLS is a general-purpose, statically typed programming language with a JIT interpreter that runs at the speed of C and Rust. Clean syntax, cross-platform and extensible with native code.",
     "primaryCta": "Read the docs",
     "secondaryCta": "Download CLS",
     "codeTitle": "hello.clsx",
@@ -28,14 +28,14 @@
   },
   "features": {
     "title": "Built for everything",
-    "subtitle": "CLS combines the comfort of a modern language with the performance of native binary compilation.",
+    "subtitle": "CLS combines the comfort of a modern language with the performance of a JIT interpreter that runs at the speed of C and Rust.",
     "facil": {
-      "title": "Easy to use",
-      "description": "Clean, predictable syntax, optional types and arrow functions. From zero to productive in a day."
+      "title": "Clean syntax",
+      "description": "Clear, predictable syntax, arrow functions and optional types. From zero to productive in a day."
     },
-    "binario": {
-      "title": "Native binary",
-      "description": "Your code compiles to a fast, self-contained native binary with no external dependencies."
+    "tipado": {
+      "title": "Statically typed",
+      "description": "Compile-time type checking, TypeScript-style. Dynamism only exists if you declare it with `any`."
     },
     "ligero": {
       "title": "Lightweight",
@@ -45,42 +45,38 @@
       "title": "Cross-platform",
       "description": "The same code runs on Windows, Linux and macOS. Native compilation per platform and architecture."
     },
+    "ffi": {
+      "title": "Interoperability",
+      "description": "Bindings for other languages and extensions to load native code directly from CLS."
+    },
     "cmx": {
       "title": "Native CMX",
-      "description": "JSX-like markup directly in the language to build interfaces with `CmxValue`."
-    },
-    "modules": {
-      "title": "Module system",
-      "description": "Organize your code with imports and compiled `.clslib` libraries, with multi-module type checking."
+      "description": "Layout from code: JSX-like markup in the language itself to build interfaces with `CmxValue`."
     }
   },
   "pipeline": {
     "title": "How it works",
-    "subtitle": "From source code to native binary through a clear, testable pipeline.",
+    "subtitle": "From source code to execution through a clear, testable pipeline.",
     "step1": {
       "title": "Lexer + Parser",
       "description": "Your `.clsx` code is tokenized and parsed into a serializable AST."
     },
     "step2": {
       "title": "Type checker",
-      "description": "TypeScript-style type checking with unions, generics and literals."
+      "description": "Static type checking, TypeScript-style with unions, generics and literals."
     },
     "step3": {
       "title": "Optimizer",
-      "description": "AST optimizations before emission."
+      "description": "AST optimizations before execution."
     },
     "step4": {
-      "title": "Native backend",
-      "description": "Native binary emission for your platform, with JIT and WASM as a portable backend."
+      "title": "JIT interpreter",
+      "description": "A JIT interpreter that runs at the speed of C and Rust. Compilation to native binaries is in development."
     }
-  },
-  "stdlib": {
-    "title": "Standard library",
-    "subtitle": "Compact, focused modules that cover day-to-day needs."
   },
   "cta": {
     "title": "Ready to write CLS?",
-    "subtitle": "Install the CLI, create your first project and compile to a native binary.",
+    "subtitle": "Install the CLI, create your first project and run CLS at the speed of C and Rust.",
     "docs": "Go to the docs",
     "download": "Download CLS"
   },
@@ -93,34 +89,34 @@
   },
   "about": {
     "title": "About CLS",
-    "subtitle": "A general-purpose language: easy to use, modular and lightweight.",
+    "subtitle": "A general-purpose, statically typed language with a JIT interpreter that runs at the speed of C and Rust.",
     "philosophyTitle": "Philosophy",
     "philosophy1": "General purpose: scripting, plugins, CLI tools, apps and more, all with the same language.",
-    "philosophy2": "The core is minimal; nodes (host executables) extend the functionality.",
-    "philosophy3": "Cross-platform by nature: native binaries for every system, without heavyweight virtual machines.",
-    "philosophy4": "Embeddable from Rust, Python, JS, Go, C# and more.",
+    "philosophy2": "Statically typed by default: compile-time checking, with `any` as the only dynamic escape.",
+    "philosophy3": "Cross-platform by nature: the same code runs on Windows, Linux and macOS, without heavyweight virtual machines.",
+    "philosophy4": "Extensible: bindings for other languages, native code loading and host nodes built by the community.",
     "layersTitle": "3-layer architecture",
-    "layersSubtitle": "A clean separation between the language, the runtime and the host.",
+    "layersSubtitle": "A clean separation between the language, the runtime and the host — designed so you can build your own nodes.",
     "layer1": {
       "title": "cls-core",
-      "description": "The language: lexer, parser, type checker, optimizer and backends. Environment-agnostic."
+      "description": "The language: lexer, parser, type checker, optimizer and the JIT interpreter. Environment-agnostic."
     },
     "layer2": {
       "title": "cls-runtime",
-      "description": "The runtime: tree-walker interpreter, values, stdlib, GC and sandboxed VFS."
+      "description": "The runtime: JIT interpreter, values, stdlib, GC and sandboxed VFS."
     },
     "layer3": {
       "title": "nodes",
-      "description": "The hosts: clx (dev CLI) and clxr (lightweight runtime). They provide FS, network, CLI and config."
+      "description": "The hosts: clx (dev CLI) and clxr (lightweight runtime). Build your own to embed CLS anywhere: FS, network, CLI, config and more."
     },
     "roadmapTitle": "Roadmap",
-    "roadmapSubtitle": "From the tree-walker interpreter to native compilation.",
-    "f1": "Workspace + crates + base nodes",
-    "f2": "Lexer → parser → tree-walker pipeline",
-    "f3": "Type checker + name resolver + optimizer",
-    "f4": "Stdlib: math, json, fs, http, intrinsics",
-    "f5": "ModuleResolver + imports + exports + user modules",
-    "f6": "ccls→clx migration, .ccls→.clsx",
+    "roadmapSubtitle": "What is already done and what's next.",
+    "f1": "JIT interpreter at the speed of C and Rust — done.",
+    "f2": "Static type checker + name resolver + optimizer — done.",
+    "f3": "Native AOT backend: a binary per platform and architecture — in development.",
+    "f4": "Stdlib: system modules and intrinsics, yet to be defined.",
+    "f5": "Modules, imports, exports and user modules.",
+    "f6": "ccls→clx migration, .ccls→.clsx.",
     "extra": "LSP + VS Code extension + type maps + async/await + CMX + errors with traces",
     "jit": "JIT (CLS → WASM → wasmtime) via `clx run --jit`",
     "repoTitle": "The code",
