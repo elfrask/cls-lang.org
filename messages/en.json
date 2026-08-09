@@ -7,6 +7,7 @@
     "docs": "Docs",
     "blog": "Blog",
     "showcase": "Showcase",
+    "socials": "Socials",
     "about": "About",
     "search": "Packages",
     "download": "Download",
@@ -225,6 +226,18 @@
     "emptyTitle": "No projects yet",
     "emptyText": "The showcase is coming soon. In the meantime, explore the docs and build your first project!",
     "docsCta": "Go to the docs"
+  },
+  "socials": {
+    "title": "Social media",
+    "subtitle": "Join the CLS community and follow the language development.",
+    "github": {
+      "name": "GitHub",
+      "description": "The CLS source code, issues, releases and contributions."
+    },
+    "discord": {
+      "name": "Discord",
+      "description": "The community server to talk about CLS, get help and share projects."
+    }
   },
   "search": {
     "title": "Packages",

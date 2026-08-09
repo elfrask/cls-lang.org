@@ -7,6 +7,7 @@
     "docs": "Docs",
     "blog": "Blog",
     "showcase": "Showcase",
+    "socials": "Socials",
     "about": "Acerca",
     "search": "Paquetes",
     "download": "Descargar",
@@ -225,6 +226,18 @@
     "emptyTitle": "Aún no hay proyectos",
     "emptyText": "No hay proyectos actualmente disponible pero puedes contactar al elfrakodev@gmail.com para agregar tu proyecto a la lista",
     "docsCta": "Ir a la documentación"
+  },
+  "socials": {
+    "title": "Redes sociales",
+    "subtitle": "Únete a la comunidad de CLS y sigue el desarrollo del lenguaje.",
+    "github": {
+      "name": "GitHub",
+      "description": "El código fuente de CLS, issues, releases y contribuciones."
+    },
+    "discord": {
+      "name": "Discord",
+      "description": "El servidor de la comunidad para hablar de CLS, resolver dudas y compartir proyectos."
+    }
   },
   "search": {
     "title": "Paquetes",
