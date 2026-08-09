@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, Loader2, Search, SearchX, Sparkles, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Reveal } from "@/components/reveal";
 
@@ -116,10 +117,17 @@ export function BlogList({ posts }: { posts: BlogListPost[] }) {
                     {post.excerpt}
                   </p>
                 )}
-                <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-                  {t("readMore")}
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                </span>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="mt-3 w-fit transition-colors group-hover:border-primary/40"
+                >
+                  <span>
+                    {t("readMore")}
+                    <ArrowRight data-icon="inline-end" className="transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </Button>
               </Link>
             </Reveal>
           ))}
