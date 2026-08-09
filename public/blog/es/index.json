@@ -20,6 +20,13 @@
       "date": "2025-06-10",
       "author": "Equipo CLS",
       "excerpt": "Cómo empezó CLS: la primera implementación en Python, su motor transpilador, el lenguaje con módulos, clases y CMX, y los experimentos que lo rodearon."
+    },
+    {
+      "slug": "devlog-origenes-batch",
+      "title": "Devlog: los orígenes, CLS en Batch",
+      "date": "2017-02-20",
+      "author": "Equipo CLS",
+      "excerpt": "El verdadero origen de CLS: un prototipo endeble escrito en Batch de cmd en 2017, las múltiples reescrituras de la era prototipo y por qué la 1.0 no fue la primera implementación del lenguaje."
     }
   ]
 }
