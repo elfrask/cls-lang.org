@@ -172,8 +172,3 @@ a time.
 
 And it was right after this that the author sat down to write the version he
 would finally call 1.0. That is the next story.
-
----
-
-*Previous: [the first CLS in Python](/blog/devlog-primeras-python) ·
-Next: [CLS 1.0–1.1, the version that consolidated the language](/blog/devlog-1-0-1-1).*

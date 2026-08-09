@@ -219,7 +219,9 @@
     "noResultsText": "No hay entradas que coincidan con «{query}».",
     "loadMore": "Cargando más entradas…",
     "noMore": "Fin de las entradas",
-    "new": "Nuevo"
+    "new": "Nuevo",
+    "prev": "Anterior",
+    "next": "Siguiente"
   },
   "showcase": {
     "title": "Showcase",

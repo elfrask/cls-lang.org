@@ -184,8 +184,3 @@ something much more solid. The next step was **Python** (`cls_py`,
 living inside the 1.0–1.1 repository. Those two stages have their own devlogs,
 but the story —the real one, the one about the kid and the `.bat`— starts here,
 on 20/02/2017.
-
----
-
-*Next: [the first CLS in Python](/blog/devlog-primeras-python) — where the
-story continues years later, outside Batch.*

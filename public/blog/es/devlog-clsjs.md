@@ -176,8 +176,3 @@ en más de un lugar a la vez.
 
 Y fue justo después de esto cuando el autor se sentó a escribir la versión que
 finalmente llamaría 1.0. Esa es la siguiente historia.
-
----
-
-*Anterior: [las primeras CLS en Python](/blog/devlog-primeras-python) ·
-Siguiente: [CLS 1.0–1.1, la versión que consolidó el lenguaje](/blog/devlog-1-0-1-1).*

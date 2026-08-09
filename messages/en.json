@@ -219,7 +219,9 @@
     "noResultsText": "No posts match “{query}”.",
     "loadMore": "Loading more posts…",
     "noMore": "End of posts",
-    "new": "New"
+    "new": "New",
+    "prev": "Previous",
+    "next": "Next"
   },
   "showcase": {
     "title": "Showcase",

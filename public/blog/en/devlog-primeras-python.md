@@ -197,8 +197,3 @@ But the author, by then a bit more grown up yet still inexperienced, kept
 searching. The next step was not to stay in Python: it was to port that whole
 engine to **JavaScript**, and that implementation — `CLSJS` — ended up living
 inside the 1.0–1.1 repository. That story has its own devlog.
-
----
-
-*Previous: [the origins, CLS in Batch](/blog/devlog-origenes-batch) ·
-Next: [CLSJS, the engine in JavaScript](/blog/devlog-clsjs).*

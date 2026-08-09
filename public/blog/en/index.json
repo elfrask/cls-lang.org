@@ -16,7 +16,7 @@
     },
     {
       "slug": "devlog-1-0-1-1",
-      "title": "Devlog: CLS 1.0–1.1, the version that consolidated the language",
+      "title": "Devlog: CLS 1.0-1.1, the version that consolidated the language",
       "date": "2025-06-10",
       "author": "CLS Team",
       "excerpt": "The first official and numbered version of CLS: its Python transpiler engine, the language with modules, classes and CMX, the experiments around it — and why it was not the first implementation of the language."

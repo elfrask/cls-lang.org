@@ -108,5 +108,4 @@ tell it in [the 2.0's first devlog](/blog/primer-devlog).
 
 ---
 
-*Version: [CLS 1.2](https://github.com/elfrask/cls/tree/1.2) · Previous:
-[CLS 1.0–1.1, the version that consolidated the language](/blog/devlog-1-0-1-1).*
+*Version: [CLS 1.2](https://github.com/elfrask/cls/tree/1.2).*

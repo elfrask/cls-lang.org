@@ -2,10 +2,10 @@ import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { BlogMarkdown } from "@/components/blog/blog-markdown";
-import { readBlogPost, readingTime } from "@/lib/blog";
+import { readBlogIndex, readBlogPost, readingTime } from "@/lib/blog";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +18,11 @@ export default async function BlogPostPage({
 
   const post = readBlogPost(locale, slug);
   if (!post) notFound();
+
+  const posts = readBlogIndex(locale);
+  const index = posts.findIndex((p) => p.slug === slug);
+  const prev = index >= 0 && index < posts.length - 1 ? posts[index + 1] : undefined;
+  const next = index > 0 ? posts[index - 1] : undefined;
 
   const minutes = readingTime(post.content);
 
@@ -59,6 +64,43 @@ export default async function BlogPostPage({
         <article className="mt-8">
           <BlogMarkdown content={post.content} />
         </article>
+
+        {(prev || next) && (
+          <div className="mt-12 flex items-center justify-between gap-4">
+            {prev ? (
+              <Link
+                href={`/blog/${prev.slug}`}
+                className="group flex-1 rounded-xl glass p-4 transition-colors hover:border-primary/40"
+              >
+                <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                  <ArrowLeft className="size-3.5" />
+                  {t("prev")}
+                </span>
+                <span className="mt-1.5 block truncate text-sm font-medium group-hover:text-primary">
+                  {prev.title}
+                </span>
+              </Link>
+            ) : (
+              <span className="flex-1" />
+            )}
+            {next ? (
+              <Link
+                href={`/blog/${next.slug}`}
+                className="group flex-1 rounded-xl glass p-4 text-right transition-colors hover:border-primary/40"
+              >
+                <span className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
+                  {t("next")}
+                  <ArrowRight className="size-3.5" />
+                </span>
+                <span className="mt-1.5 block truncate text-sm font-medium group-hover:text-primary">
+                  {next.title}
+                </span>
+              </Link>
+            ) : (
+              <span className="flex-1" />
+            )}
+          </div>
+        )}
       </Reveal>
     </section>
   );

@@ -101,6 +101,4 @@ devlog.
 
 ---
 
-*Previous: [CLSJS, the engine in JavaScript](/blog/devlog-clsjs) · Versions:
-[CLS 1.0–1.1](https://github.com/elfrask/cls/tree/1.0-1.1) · Next:
-[CLS 1.2, the rewrite in Cython](/blog/devlog-1-2).*
+*Versions: [CLS 1.0–1.1](https://github.com/elfrask/cls/tree/1.0-1.1).*
