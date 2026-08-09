@@ -203,4 +203,4 @@ dentro del repositorio de la 1.0–1.1. Esa historia tiene su propio devlog.
 ---
 
 *Anterior: [los orígenes, CLS en Batch](/blog/devlog-origenes-batch) ·
-Siguiente: [CLS 1.0–1.1, el origen del lenguaje](/blog/devlog-1-0-1-1).*
+Siguiente: [CLSJS, el motor en JavaScript](/blog/devlog-clsjs).*

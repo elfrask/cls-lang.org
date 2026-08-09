@@ -189,5 +189,5 @@ empieza aquí, el 20/02/2017.
 
 ---
 
-*Siguiente: [CLS 1.0–1.1, el origen del lenguaje](/blog/devlog-1-0-1-1) — donde
-la historia continúa años después, ya en Python.*
+*Siguiente: [las primeras CLS en Python](/blog/devlog-primeras-python) — donde
+la historia continúa años después, ya fuera del Batch.*
