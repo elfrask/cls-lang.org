@@ -218,7 +218,8 @@
     "noResultsTitle": "Sin resultados",
     "noResultsText": "No hay entradas que coincidan con «{query}».",
     "loadMore": "Cargando más entradas…",
-    "noMore": "Fin de las entradas"
+    "noMore": "Fin de las entradas",
+    "new": "Nuevo"
   },
   "showcase": {
     "title": "Showcase",

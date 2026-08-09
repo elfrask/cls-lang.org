@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Loader2, Search, SearchX, X } from "lucide-react";
+import { ArrowRight, Loader2, Search, SearchX, Sparkles, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Reveal } from "@/components/reveal";
 
@@ -12,6 +12,7 @@ export type BlogListPost = {
   title: string;
   date: string;
   excerpt?: string;
+  isNew?: boolean;
   minutes?: number;
   searchText: string;
 };
@@ -103,6 +104,12 @@ export function BlogList({ posts }: { posts: BlogListPost[] }) {
                 </div>
                 <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary">
                   {post.title}
+                  {post.isNew && (
+                    <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 align-middle text-xs font-semibold uppercase tracking-wide text-primary-foreground">
+                      <Sparkles className="size-3" />
+                      {t("new")}
+                    </span>
+                  )}
                 </h2>
                 {post.excerpt && (
                   <p className="text-sm leading-relaxed text-muted-foreground">

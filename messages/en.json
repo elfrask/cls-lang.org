@@ -218,7 +218,8 @@
     "noResultsTitle": "No results",
     "noResultsText": "No posts match “{query}”.",
     "loadMore": "Loading more posts…",
-    "noMore": "End of posts"
+    "noMore": "End of posts",
+    "new": "New"
   },
   "showcase": {
     "title": "Showcase",

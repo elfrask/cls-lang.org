@@ -10,6 +10,15 @@ import {
 
 export const dynamic = "force-dynamic";
 
+const NEW_POST_DAYS = 5;
+
+function isNewPost(date: string): boolean {
+  const published = new Date(date + "T00:00:00Z").getTime();
+  if (Number.isNaN(published)) return false;
+  const elapsed = Date.now() - published;
+  return elapsed >= 0 && elapsed <= NEW_POST_DAYS * 24 * 60 * 60 * 1000;
+}
+
 function stripMarkdown(content: string): string {
   return content
     .replace(/```[\s\S]*?```/g, " ")
@@ -38,6 +47,7 @@ export default async function BlogPage({
       title: post.title,
       date: post.date,
       excerpt: post.excerpt,
+      isNew: isNewPost(post.date),
       minutes: full ? readingTime(full.content) : undefined,
       searchText: [
         post.title,
