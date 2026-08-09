@@ -1,9 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Mail } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
+
+const AUTHOR_EMAIL = "elfraskdev@gmail.com";
 
 export default async function ShowcasePage({
   params,
@@ -30,9 +32,17 @@ export default async function ShowcasePage({
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             {t("emptyText")}
           </p>
-          <Button asChild className="mt-6">
-            <Link href="/docs">{t("docsCta")}</Link>
-          </Button>
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button asChild>
+              <a href={`mailto:${AUTHOR_EMAIL}`}>
+                <Mail data-icon="inline-start" />
+                {t("emailCta")}
+              </a>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link href="/docs">{t("docsCta")}</Link>
+            </Button>
+          </div>
         </div>
       </Reveal>
     </section>

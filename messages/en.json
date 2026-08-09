@@ -224,7 +224,8 @@
     "title": "Showcase",
     "subtitle": "Projects built with CLS.",
     "emptyTitle": "No projects yet",
-    "emptyText": "The showcase is coming soon. In the meantime, explore the docs and build your first project!",
+    "emptyText": "The showcase is coming soon. Did you build something with CLS? Email the author at elfraskdev@gmail.com to add your project to the list.",
+    "emailCta": "Contact the author",
     "docsCta": "Go to the docs"
   },
   "socials": {
