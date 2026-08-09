@@ -33,7 +33,10 @@ export function readBlogIndex(lang: string): BlogPostMeta[] {
     if (!existsSync(filePath)) continue;
     const data = readJson<{ posts?: BlogPostMeta[] }>(filePath);
     if (!data?.posts) continue;
-    if (data.posts.length > 0 || l === DEFAULT_BLOG_LANG) return data.posts;
+    const sorted = [...data.posts].sort((a, b) =>
+      b.date.localeCompare(a.date),
+    );
+    if (sorted.length > 0 || l === DEFAULT_BLOG_LANG) return sorted;
   }
   return [];
 }
