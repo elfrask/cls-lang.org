@@ -22,6 +22,13 @@
       "excerpt": "Cómo empezó CLS: la primera implementación en Python, su motor transpilador, el lenguaje con módulos, clases y CMX, y los experimentos que lo rodearon."
     },
     {
+      "slug": "devlog-primeras-python",
+      "title": "Devlog: las primeras CLS en Python (cls_py y cls_py2.2)",
+      "date": "2019-09-15",
+      "author": "Equipo CLS",
+      "excerpt": "El salto del Batch a Python: las implementaciones cls_py y cls_py2.2 con lexer propio, la sintaxis con fub/include, la stdlib con clv e impo, las DLLs tipo pickle y el ancestro de todo lo que vendría."
+    },
+    {
       "slug": "devlog-origenes-batch",
       "title": "Devlog: los orígenes, CLS en Batch",
       "date": "2017-02-20",
