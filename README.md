@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# cls-lang.org
 
-## Getting Started
+Sitio web oficial de [CLS](https://github.com/elfrask/cls), un lenguaje de programación de propósito general, de tipado estático, con un intérprete JIT que corre a la velocidad de C y Rust.
 
-First, run the development server:
+Construido con **Next.js 16 (App Router)**, **Tailwind CSS v4**, **next-intl** para internacionalización y **Shiki** para resaltado de sintaxis.
+
+## Secciones
+
+- **Docs** — documentación del lenguaje (guía, referencia del runtime, arquitectura y roadmap) servida desde `public/docs`.
+- **Blog** — devlogs y anuncios de releases en español e inglés (`public/blog`).
+- **Playground** — editor con resaltado de sintaxis de CLS y una terminal interactiva para probar el lenguaje desde el navegador.
+- **Download** — descargas de releases con soporte multi-plataforma, canales estable y de desarrollo, y un archivo de todas las versiones.
+- **Showcase** — proyectos construidos con CLS.
+- **Comunidad** — enlaces a GitHub y Discord.
+- **Search** — búsqueda de paquetes del registry (en desarrollo).
+
+## Empezar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El servidor de desarrollo corre en [http://localhost:8087](http://localhost:8087).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo (puerto 8087) |
+| `npm run build` | Build de producción |
+| `npm run start` | Sirve el build de producción |
+| `npm run lint` | ESLint |
+| `npm run sync-docs` | Sincroniza la documentación desde el repo de CLS |
+| `npm run build-docs-index` | Regenera el índice de la documentación |
 
-## Learn More
+## Estructura
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/[locale]/        # Rutas i18n (docs, blog, playground, download, …)
+├── components/          # UI, navbar, footer, playground, blog, docs, download
+├── data/releases/       # Metadatos de releases (estable y de desarrollo)
+├── lib/                 # releases, blog, docs, highlighter (Shiki), i18n
+└── i18n/                # Configuración de next-intl
+public/
+├── blog/                # Devlogs (es/en) + índices
+├── docs/                # Documentación del lenguaje (es/en)
+└── releases/            # Binarios de releases
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Internacionalización
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Los textos viven en `messages/es.json` y `messages/en.json`. Cada idioma tiene sus propios docs y blog en `public/docs` y `public/blog`.
 
-## Deploy on Vercel
+## Licencia
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
