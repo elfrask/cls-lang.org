@@ -7,6 +7,7 @@
     "docs": "Docs",
     "blog": "Blog",
     "showcase": "Showcase",
+    "playground": "Playground",
     "community": "Community",
     "about": "About",
     "search": "Packages",
@@ -125,13 +126,23 @@
   },
   "download": {
     "title": "Download CLS",
-    "subtitle": "Choose your platform. Native binaries for Windows, Linux and macOS, plus the source code.",
+    "titleWithVersion": "Download CLS {version}",
+    "subtitle": "Pick your platform. Native binaries for Windows, Linux and macOS, plus the source code.",
     "version": "v2.0-dev1",
     "stable": "Stable",
     "dev": "Dev",
     "autoTitle": "Recommended download",
     "autoText": "We detected your system:",
     "autoBtn": "Download {version}",
+    "viewDevlog": "Read this version's devlog",
+    "comingSoon": "Coming soon",
+    "comingSoonTitle": "CLS {version} is on its way",
+    "comingSoonText": "The first release of the 2.0 series isn't available yet. We're on the home stretch of QA evaluation before publishing the first binaries.",
+    "comingSoonBlogText": "The first release of the 2.0 series isn't available yet. Read the announcement to learn about the current state of development and the QA evaluations.",
+    "readAnnouncement": "Read the announcement",
+    "versionNotFoundTitle": "Version not found",
+    "versionNotFoundText": "The version you're looking for doesn't exist or doesn't have a download page yet.",
+    "backToDownloads": "Back to downloads",
     "windows": {
       "name": "Windows",
       "description": ".msi installer for Windows 10/11 (x64).",
@@ -166,14 +177,14 @@
       "4": "Create your first project:"
     },
     "verifyCmd": "clx --version",
-    "newCmd": "clx new hello",
-    "comingSoon": "Coming soon"
+    "newCmd": "clx new hello"
   },
   "allVersions": {
     "title": "All versions",
     "subtitle": "Every CLS version, with binaries and checksums. Scroll to the bottom of the page to load more.",
     "highlightsTitle": "Key highlights",
     "viewDevlog": "Read the full devlog on the blog",
+    "viewVersionPage": "Version page",
     "loadMore": "Loading more versions…",
     "noMore": "End of versions",
     "platformCol": "Platform",
@@ -217,7 +228,19 @@
     "noMore": "End of posts",
     "new": "New",
     "prev": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "downloadThisVersion": "Download {version}",
+    "goToVersionPage": "Go to the download page",
+    "tags": {
+      "all": "All",
+      "new": "New",
+      "announcement": "Announcements",
+      "releases": "Releases",
+      "release-dev": "Dev release",
+      "release-stable": "Stable release",
+      "info": "Info",
+      "history": "History"
+    }
   },
   "showcase": {
     "title": "Showcase",
@@ -280,6 +303,26 @@
       "implement": "Implementation",
       "use": "Legacy"
     }
+  },
+  "playground": {
+    "title": "Playground",
+    "subtitle": "Try CLS directly from your browser.",
+    "editorTitle": "hola.clsx",
+    "terminalTitle": "playground",
+    "tabEditor": "Editor",
+    "tabTerminal": "Terminal",
+    "runButton": "Run",
+    "runCmd": "$ clx run hola.clsx",
+    "exitCode": "Process exited with code {code}.",
+    "promptUser": "clx",
+    "promptHost": "playground",
+    "welcomeLine1": "CLS Playground — run commands from the browser.",
+    "welcomeLine2": "For now only the `echo` command is available. Try `echo hello`.",
+    "commandPrefix": ">",
+    "echoUsage": "Usage: echo <text>",
+    "unknownCmd": "Unknown command: {cmd}",
+    "inputPlaceholder": "Type a command…",
+    "hintText": "Only `echo` is available in this version of the playground."
   },
   "notFound": {
     "title": "404",

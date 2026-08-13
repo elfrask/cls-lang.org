@@ -49,6 +49,7 @@ export default async function BlogPage({
       excerpt: post.excerpt,
       isNew: isNewPost(post.date),
       minutes: full ? readingTime(full.content) : undefined,
+      tags: post.tags,
       searchText: [
         post.title,
         post.excerpt ?? "",

@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowRight, Loader2, Search, SearchX, Sparkles, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Reveal } from "@/components/reveal";
+import { cn } from "@/lib/utils";
 
 export type BlogListPost = {
   slug: string;
@@ -14,22 +15,46 @@ export type BlogListPost = {
   excerpt?: string;
   isNew?: boolean;
   minutes?: number;
+  tags?: string[];
   searchText: string;
 };
 
 const CHUNK = 10;
 
+const TAG_ORDER = [
+  "new",
+  "announcement",
+  "releases",
+  "release-dev",
+  "release-stable",
+  "info",
+  "history",
+];
+
 export function BlogList({ posts }: { posts: BlogListPost[] }) {
   const t = useTranslations("blog");
   const [query, setQuery] = useState("");
+  const [tag, setTag] = useState<string>("all");
   const [visible, setVisible] = useState(CHUNK);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
 
+  const availableTags = useMemo(() => {
+    return TAG_ORDER.filter((key) => {
+      if (key === "new") return posts.some((p) => p.isNew);
+      return posts.some((p) => p.tags?.includes(key));
+    });
+  }, [posts]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return posts;
-    return posts.filter((p) => p.searchText.includes(q));
-  }, [query, posts]);
+    return posts.filter((p) => {
+      if (tag === "new" && !p.isNew) return false;
+      if (tag !== "all" && tag !== "new" && !p.tags?.includes(tag))
+        return false;
+      if (q && !p.searchText.includes(q)) return false;
+      return true;
+    });
+  }, [query, tag, posts]);
 
   const hasMore = visible < filtered.length;
 
@@ -50,7 +75,39 @@ export function BlogList({ posts }: { posts: BlogListPost[] }) {
 
   return (
     <div className="mx-auto max-w-4xl">
-      <div className="relative mt-10">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+        <button
+          type="button"
+          onClick={() => {
+            setTag("all");
+            setVisible(CHUNK);
+          }}
+          className={cn(
+            "rounded-full border border-border/60 px-3 py-1.5 text-xs font-medium transition-colors hover:border-primary/40",
+            tag === "all" && "border-primary bg-primary text-primary-foreground",
+          )}
+        >
+          {t("tags.all")}
+        </button>
+        {availableTags.map((key) => (
+          <button
+            key={key}
+            type="button"
+            onClick={() => {
+              setTag(key);
+              setVisible(CHUNK);
+            }}
+            className={cn(
+              "rounded-full border border-border/60 px-3 py-1.5 text-xs font-medium transition-colors hover:border-primary/40",
+              tag === key && "border-primary bg-primary text-primary-foreground",
+            )}
+          >
+            {t(`tags.${key}`)}
+          </button>
+        ))}
+      </div>
+
+      <div className="relative mt-6">
         <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
         <Input
           value={query}
@@ -115,6 +172,18 @@ export function BlogList({ posts }: { posts: BlogListPost[] }) {
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {post.excerpt}
                   </p>
+                )}
+                {post.tags && post.tags.length > 0 && (
+                  <div className="mt-1 flex flex-wrap gap-1.5">
+                    {post.tags.map((key) => (
+                      <span
+                        key={key}
+                        className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary"
+                      >
+                        {t(`tags.${key}`)}
+                      </span>
+                    ))}
+                  </div>
                 )}
                 <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
                   {t("readMore")}

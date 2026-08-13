@@ -2,16 +2,26 @@
   "posts": [
     {
       "slug": "primer-devlog",
-      "title": "Primer devlog: CLS 2.0 y el nuevo sitio",
-      "date": "2026-08-08",
+      "title": "Anuncio: CLS 2.X, el camino que estamos construyendo",
+      "date": "2026-08-12",
       "author": "Equipo CLS",
-      "excerpt": "Bienvenidos al blog. En este primer devlog contamos qué trae CLS 2.0, cómo se compara con la 1.0–1.1 y la 1.2, el rumbo del lenguaje y cómo se construyó esta web."
+      "tags": ["announcement", "releases", "release-dev"],
+      "excerpt": "Anunciamos el rumbo de la próxima generación de CLS: la serie 2.X. Reescrita en Rust con tipado estático e intérprete JIT, en desarrollo y cerrando las evaluaciones de QA antes de la primera versión estable."
+    },
+    {
+      "slug": "anuncio-estado-2-0-dev1",
+      "title": "Anuncio: el estado actual de CLS 2.0-dev1",
+      "date": "2026-08-13",
+      "author": "Equipo CLS",
+      "tags": ["announcement", "releases", "release-dev"],
+      "excerpt": "El lenguaje está ~90% listo. La 2.0-dev1 pasa por estrictas evaluaciones de QA antes de publicar los primeros binarios; la primera versión llegará con el intérprete JIT (~×8000 vs versiones anteriores, cerca del nativo) y el compilador vendrá después."
     },
     {
       "slug": "devlog-1-2",
       "title": "Devlog: CLS 1.2, la reescritura en Cython",
       "date": "2025-11-20",
       "author": "Equipo CLS",
+      "tags": ["releases", "release-dev"],
       "excerpt": "El intento de resolver los tiempos de compilación reescribiendo CLS desde cero en Cython, por qué la portabilidad limitada de los binarios nativos terminó con el proyecto y la lección que llevó a la 2.0."
     },
     {
@@ -19,6 +29,7 @@
       "title": "Devlog: CLS 1.0–1.1, la versión que consolidó el lenguaje",
       "date": "2025-06-10",
       "author": "Equipo CLS",
+      "tags": ["releases", "release-stable"],
       "excerpt": "La primera versión oficial y numerada de CLS: su motor transpilador en Python, el lenguaje con módulos, clases y CMX, los experimentos que lo rodearon — y por qué no fue la primera implementación del lenguaje."
     },
     {
@@ -26,6 +37,7 @@
       "title": "Devlog: CLSJS, el motor en JavaScript",
       "date": "2022-02-08",
       "author": "Equipo CLS",
+      "tags": ["info", "history"],
       "excerpt": "El puerto completo del motor a JavaScript: la pipeline desline/parselex/estructuration/generator/jump, CLS corriendo en el navegador, el openserver y la primera aparición de CMX."
     },
     {
@@ -33,6 +45,7 @@
       "title": "Devlog: las primeras CLS en Python (cls_py y cls_py2.2)",
       "date": "2019-09-15",
       "author": "Equipo CLS",
+      "tags": ["info", "history"],
       "excerpt": "El salto del Batch a Python: las implementaciones cls_py y cls_py2.2 con lexer propio, la sintaxis con fub/include, la stdlib con clv e impo, las DLLs tipo pickle y el ancestro de todo lo que vendría."
     },
     {
@@ -40,6 +53,7 @@
       "title": "Devlog: los orígenes, CLS en Batch",
       "date": "2017-02-20",
       "author": "Equipo CLS",
+      "tags": ["info", "history"],
       "excerpt": "El verdadero origen de CLS: un prototipo endeble escrito en Batch de cmd en 2017, las múltiples reescrituras de la era prototipo y por qué la 1.0 no fue la primera implementación del lenguaje."
     }
   ]

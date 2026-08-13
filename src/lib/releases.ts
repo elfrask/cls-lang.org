@@ -26,6 +26,7 @@ export type ReleaseVersion = {
   notes?: string;
   highlights?: string[];
   blog?: string;
+  comingSoon?: boolean;
 };
 
 export type ReleaseFile = ReleaseVersion & {
@@ -52,6 +53,7 @@ export function getReleaseFile(
 export function getAllReleases(): ReleaseFile[] {
   const index = getReleaseIndex();
   return index
+    .filter((v) => !v.comingSoon)
     .map((v) => getReleaseFile(v.channel, v.version))
     .filter((r): r is ReleaseFile => Boolean(r))
     .sort((a, b) => compareVersions(b.version, a.version));
@@ -88,12 +90,35 @@ export function getCurrentVersion(): ReleaseFile | undefined {
   return getReleaseFile(top.channel, top.version);
 }
 
+export function getReleaseByVersion(
+  version: string,
+): ReleaseFile | undefined {
+  const index = getReleaseIndex();
+  const entry = index.find((v) => v.version === version);
+  if (!entry) return undefined;
+  return getReleaseFile(entry.channel, entry.version);
+}
+
+export function getReleaseByBlog(
+  slug: string,
+): ReleaseFile | undefined {
+  const index = getReleaseIndex();
+  for (const v of index) {
+    if (v.comingSoon) continue;
+    const file = getReleaseFile(v.channel, v.version);
+    if (file?.blog === slug) return file;
+  }
+  return undefined;
+}
+
 export function findAssetByFilename(
   channel: "release" | "dev",
   filename: string,
 ): ReleaseAsset | undefined {
   const index = getReleaseIndex();
-  const versions = index.filter((v) => v.channel === channel);
+  const versions = index.filter(
+    (v) => v.channel === channel && !v.comingSoon,
+  );
   for (const v of versions) {
     const release = getReleaseFile(channel, v.version);
     const asset = release?.assets.find((a) => a.filename === filename);

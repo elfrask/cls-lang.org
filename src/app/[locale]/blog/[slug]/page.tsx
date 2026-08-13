@@ -5,7 +5,9 @@ import { Link } from "@/i18n/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { BlogMarkdown } from "@/components/blog/blog-markdown";
+import { VersionDownloadCard } from "@/components/blog/version-download-card";
 import { readBlogIndex, readBlogPost, readingTime } from "@/lib/blog";
+import { getReleaseByBlog } from "@/lib/releases";
 
 export const dynamic = "force-dynamic";
 
@@ -25,6 +27,7 @@ export default async function BlogPostPage({
   const next = index > 0 ? posts[index - 1] : undefined;
 
   const minutes = readingTime(post.content);
+  const release = getReleaseByBlog(slug);
 
   return (
     <section className="mx-auto w-full max-w-4xl px-4 pb-20 pt-16 sm:px-6">
@@ -64,6 +67,10 @@ export default async function BlogPostPage({
         <article className="mt-8">
           <BlogMarkdown content={post.content} />
         </article>
+
+        {release && (
+          <VersionDownloadCard locale={locale} release={release} />
+        )}
 
         {(prev || next) && (
           <div className="mt-12 flex items-center justify-between gap-4">

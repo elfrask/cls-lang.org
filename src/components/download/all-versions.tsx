@@ -66,16 +66,16 @@ function VersionAccordion({
       className="overflow-hidden rounded-2xl border border-border/60 bg-card/40 transition-colors hover:border-border/80"
       data-release={key}
     >
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={open}
-        aria-label={t(open ? "collapse" : "expand", {
-          version: `v${release.version}`,
-        })}
-        className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left transition-colors hover:bg-card/60"
-      >
-        <div className="flex min-w-0 items-center gap-3">
+      <div className="flex items-center justify-between gap-3 px-5 py-4">
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={open}
+          aria-label={t(open ? "collapse" : "expand", {
+            version: `v${release.version}`,
+          })}
+          className="flex min-w-0 flex-1 items-center gap-3 text-left transition-colors hover:text-foreground"
+        >
           <ChevronDown
             className={cn(
               "size-4 shrink-0 text-muted-foreground transition-transform duration-200",
@@ -91,11 +91,20 @@ function VersionAccordion({
           >
             {release.channel === "release" ? td("stable") : td("dev")}
           </Badge>
+        </button>
+        <div className="flex shrink-0 items-center gap-3">
+          <Link
+            href={`/download/${release.version}`}
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-primary transition-colors hover:text-primary/80"
+          >
+            {t("viewVersionPage")}
+            <ArrowRight className="size-3.5" />
+          </Link>
+          <span className="text-xs text-muted-foreground">
+            {release.released}
+          </span>
         </div>
-        <span className="shrink-0 text-xs text-muted-foreground">
-          {release.released}
-        </span>
-      </button>
+      </div>
 
       {open && (
         <div className="border-t border-border/60">

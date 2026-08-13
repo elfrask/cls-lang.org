@@ -7,6 +7,7 @@ export type BlogPostMeta = {
   date: string;
   author?: string;
   excerpt?: string;
+  tags?: string[];
 };
 
 export type BlogPost = {

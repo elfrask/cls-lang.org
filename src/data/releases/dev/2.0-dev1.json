@@ -2,6 +2,7 @@
   "version": "2.0-dev1",
   "channel": "dev",
   "released": "2026-08-05",
+  "comingSoon": true,
   "notes": "Implementación 2.0 en Rust. Versión de desarrollo: CLS aún no está en fase estable.",
   "highlights": [
     "Implementación 2.0 escrita en Rust",
@@ -9,7 +10,7 @@
     "WASM como backend portable",
     "Sistema de módulos con `.clslib` y verificación multi-módulo"
   ],
-  "blog": "primer-devlog",
+  "blog": "anuncio-estado-2-0-dev1",
   "assets": [
     {
       "filename": "cls-2.0-dev1-windows-x64.msi",
