@@ -20,56 +20,25 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 export const DOCS_ROOT = join(ROOT, "public", "docs", "es");
 
-/** Lenguaje asignado a cada fence vacío, por archivo (relativo a es/), en orden. */
+/**
+ * Lenguaje asignado a cada fence vacío, por archivo (relativo a es/), en orden.
+ * "ps"/"sh"/"bash" = comandos de shell/PowerShell; "clsx" = código CLS;
+ * "text" = árboles y salidas de terminal.
+ */
 const LANG_MAP = {
-  "contribution/CORE.md": ["text", "text"],
-  "contribution/INFRASTRUCTURE.md": ["text"],
-  "contribution/PIPELINE.md": ["text", "text"],
-  "contribution/RUNTIME.md": ["text", "text", "text", "text"],
-  "desarrollo/agregar-feature.md": ["bash"],
-  "desarrollo/agregar-modulo-interno.md": ["rust", "rust", "rust", "rust"],
-  "desarrollo/arquitectura-core.md": ["rust"],
-  "desarrollo/contribuir.md": ["bash"],
-  "desarrollo/testing.md": [
-    "bash", "text", "rust", "rust", "rust", "rust", "rust", "rust", "bash", "bash",
-  ],
-  "ejecucion/resolvers.md": ["rust", "rust", "rust", "clsx"],
-  "ejecucion/sin-nodo.md": ["rust", "rust", "rust", "rust"],
-  "future/native/FFI.md": ["text", "text", "text", "text"],
-  "future/native/NATIVE_AOT.md": ["text", "bash", "text"],
-  "future/native/PRIMITIVE_METHODS.md": ["text"],
-  "future/README.md": ["text", "text"],
-  "future/wasm/JIT_RUNTIME.md": ["text"],
-  "future/wasm/MEMORY_GC.md": ["text"],
-  "future/wasm/WASM_PIPELINE.md": ["text", "text"],
-  "guia/cli.md": ["bash", "bash"],
-  "guia/inicio-rapido.md": [
-    "clsx", "bash", "text", "clsx", "clsx", "clsx",
-    "clsx", "clsx", "clsx", "clsx", "clsx", "bash",
-  ],
-  "guia/instalacion.md": ["bash", "bash", "bash"],
-  "lenguaje/arquitectura.md": ["text", "text"],
-  "lenguaje/cmx.md": ["clsx", "rust", "clsx", "clsx", "clsx"],
-  "lenguaje/control-de-flujo.md": [
-    "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx",
-  ],
-  "lenguaje/enums.md": ["clsx", "clsx", "clsx", "clsx", "clsx"],
-  "lenguaje/funciones.md": [
-    "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx",
-  ],
-  "lenguaje/modulos.md": ["clsx", "clsx", "clsx", "clsx", "clsx"],
-  "lenguaje/oop.md": ["clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx"],
-  "lenguaje/sintaxis.md": ["clsx", "clsx", "clsx", "clsx", "clsx", "clsx"],
-  "lenguaje/tipos.md": [
-    "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx", "clsx",
-  ],
-  "project/ARCHITECTURE.md": ["text", "text"],
-  "project/README.md": ["text"],
-  "runtime/ejecucion.md": ["text"],
-  "runtime/errores.md": ["rust", "rust", "rust", "text", "text"],
-  "runtime/metodos-primitivos.md": ["rust", "clsx", "rust"],
-  "runtime/valores.md": ["rust"],
-  "use/SYNTAX.md": ["clsx", "clsx", "clsx", "clsx", "clsx", "clsx"],
+  "desarrollo/agregar-feature.md": ["text"],
+  "desarrollo/agregar-modulo-interno.md": ["clsx"],
+  "desarrollo/arquitectura.md": ["text"],
+  "desarrollo/contribuir.md": ["text"],
+  "guia/cli.md": ["text", "text", "text"],
+  "guia/inicio-rapido.md": ["text"],
+  "herramientas/clxr.md": ["text", "text"],
+  "herramientas/lsp.md": ["text"],
+  "herramientas/maptype.md": ["text", "text"],
+  "herramientas/repl.md": ["text", "text"],
+  "lenguaje/multi-entorno.md": ["text"],
+  "runtime/errores.md": ["text", "text"],
+  "runtime/walker.md": ["text"],
 };
 
 function walk(dir, files = []) {

@@ -293,15 +293,11 @@
     "sections": {
       "guia": "Guía",
       "lenguaje": "Lenguaje",
+      "stdlib": "Biblioteca estándar",
       "runtime": "Runtime",
-      "modules": "Módulos",
-      "ejecucion": "Ejecución",
-      "future": "Futuro",
-      "project": "Proyecto",
-      "desarrollo": "Desarrollo",
-      "contribution": "Contribución",
-      "implement": "Implementación",
-      "use": "Legacy"
+      "herramientas": "Herramientas",
+      "embedding": "Embedding",
+      "desarrollo": "Desarrollo"
     }
   },
   "playground": {

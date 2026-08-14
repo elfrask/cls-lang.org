@@ -23,34 +23,42 @@ const DOCS_ROOT = join(ROOT, "public", "docs");
 const SECTION_ORDER = [
   "guia",
   "lenguaje",
+  "stdlib",
   "runtime",
-  "modules",
-  "ejecucion",
-  "future",
-  "project",
+  "herramientas",
+  "embedding",
   "desarrollo",
-  "contribution",
-  "implement",
-  "use",
 ];
 
 /** Orden manual de páginas por sección (por slug base). */
 const ORDER_OVERRIDES = {
   guia: ["instalacion", "inicio-rapido", "cli", "configuracion"],
   lenguaje: [
-    "arquitectura",
     "sintaxis",
     "tipos",
+    "datos",
     "control-de-flujo",
     "funciones",
     "oop",
     "enums",
+    "estructuras",
     "modulos",
-    "cmx",
-    "extension",
+    "errores",
     "multi-entorno",
+    "extension",
+    "cmx",
   ],
-  runtime: ["ejecucion", "valores", "biblioteca-estandar", "metodos-primitivos", "errores"],
+  stdlib: ["core", "desktop", "primitivos"],
+  runtime: ["jit", "walker", "errores", "vfs"],
+  herramientas: ["repl", "lsp", "maptype", "clxr", "clxb", "python"],
+  embedding: ["python"],
+  desarrollo: [
+    "arquitectura",
+    "contribuir",
+    "testing",
+    "agregar-feature",
+    "agregar-modulo-interno",
+  ],
 };
 
 function slugify(name) {
@@ -89,8 +97,8 @@ function sortItems(items, section) {
   if (!override) return items;
   const order = new Map(override.map((slug, i) => [slug, i]));
   return [...items].sort((a, b) => {
-    const oa = order.get(a.slug);
-    const ob = order.get(b.slug);
+    const oa = order.get(a.slug.split("/").at(-1));
+    const ob = order.get(b.slug.split("/").at(-1));
     if (oa !== undefined && ob !== undefined) return oa - ob;
     if (oa !== undefined) return -1;
     if (ob !== undefined) return 1;
@@ -114,11 +122,9 @@ function main() {
     const title =
       firstHeadingTitle(content) ?? filename.replace(/\.md$/i, "");
 
-    const slugPath = parts
-      .slice(1, -1)
-      .map(slugify)
-      .join("/");
-    const slug = [slugPath, slugify(filename)].filter(Boolean).join("/");
+    // slug calificado por sección: "<seccion>/<resto-slug>"
+    // (evita colisiones como lenguaje/errores vs runtime/errores)
+    const slug = parts.map(slugify).join("/");
 
     const entry = { slug, path: rel.replace(/\\/g, "/"), title, section };
     bySlug[slug] = entry;

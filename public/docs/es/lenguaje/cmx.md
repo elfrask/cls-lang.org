@@ -1,69 +1,68 @@
-# CMX (marcado)
+# CMX (JSX nativo)
 
-CMX es el lenguaje de marcado de CLS, con sintaxis similar a JSX/HTML. Se usa
-para describir estructuras de árbol (interfaces, componentes, documentos).
-
-## Sintaxis
+CMX es una sintaxis tipo JSX para construir **valores** de marcado desde CLS.
+Se escribe dentro de paréntesis como expresión:
 
 ```clsx
-var app = (
-    <App titulo="Hola mundo" alHacerClick={() -> { print("click") }}>
-        <Parrafo>Contenido</Parrafo>
-        <Separador />
-    </App>
-);
+function main(args: String[]) -> int {
+    var contador = 1;
+    var app = (
+        <app titulo="Hola mundo" contador={contador + 1}>
+            <parrafo>Contenido</parrafo>
+            <separador />
+            <item id={3} />
+        </app>
+    );
+    print("tag:", app.tag);
+    print("props.titulo:", app.props.titulo);
+    print("props.contador:", app.props.contador);
+    print("children:", app.children.length);
+    print("child0 tag:", app.children[0].tag);
+    print("child2 props.id:", app.children[2].props.id);
+    return 0;
+};
 ```
 
-- **Etiqueta de apertura**: `<Nombre atributo="valor" ...>`.
-- **Etiqueta de cierre**: `</Nombre>`.
-- **Auto-cierre**: `<Nombre />`.
-- **Atributos**: `nombre="valor"` (cadena) o `nombre={expresión}`.
-- **Hijos**: texto o elementos anidados.
+## Atributos
 
-## Modelo de datos
+| Forma | Valor |
+|---|---|
+| `nombre="texto"` | String |
+| `nombre={expr}` | la expresión evaluada |
+| `{nombre}` | shorthand: lee la variable con ese nombre (Null si no existe) |
+| `nombre` (sin valor) | `true` |
 
-Al evaluar un elemento, se produce un `CmxValue`:
+## Children
 
-```rust
-CmxValue {
-    tag: String,
-    props: Record<String, Value>,
-    children: Array<Value>,
-}
-```
+- Texto plano → String.
+- `{expr}` → el valor de la expresión.
+- Elementos anidados → valores CMX recursivos.
+- `self-closing`: `<separador />`.
 
-Se accede con `.tag`, `.props` y `.children`:
+## Valor resultante
 
-```clsx
-print(app.tag);          # "App"
-print(app.props.titulo); # "Hola mundo"
-print(app.children[0].tag); # "Parrafo"
-```
+`CmxValue { tag, props, children }`:
 
-## Expresiones en atributos
+- `tag` — String para tags en **minúscula**; para tags en **mayúscula** es la
+  **referencia** (función/var/clase) sin ejecutarla (CMX no la llama).
+- `props` — `Record` con los atributos (`app.props.titulo`).
+- `children` — `Array` de valores (`app.children[0].tag`, `app.children[2].props.id`).
 
-Los atributos con `{...}` se evalúan como expresiones CLS:
+## Representación en `print`
 
-```clsx
-<Contador valor={contador + 1} />
-```
+- Sin children: `<tag prop="valor" />` (con `props` ordenadas; `/>` si está
+  vacío).
+- Con children: `<tag>... (n children)</tag>`.
+- Ej.: `print(app)` → `<app contador="2" titulo="Hola mundo">... (3 children)</app>`
+  (props ordenadas alfabéticamente).
 
-## Texto y elementos anidados
+## Runtime
 
-```clsx
-<div>
-    Texto plano
-    <span>anidado</span>
-</div>
-```
+El tree-walker evalúa el elemento en `evaluate_cmx` (atributos y children
+recursivamente) y construye el `CmxValue`. El JIT compila CMX a host
+functions `cmx_*`. El lexer usa un buffer FIFO (`cmx_buffer`) con detección de
+`<`/`>` balanceados por tokens, y el parser construye el elemento
+(`parse_cmx_element`) con soporte de expresiones en atributos y arrow
+functions con `()`.
 
-El texto y los hijos se convierten en valores; los elementos anidados se
-convierten en `CmxValue` recursivamente.
-
-## Implementación
-
-El análisis de CMX ocurre en el lexer (que reconoce `<Tag ...>` como tokens de
-marcado) y en el parser (`parse_cmx_element`), que produce una expresión
-`Expression::Cmx`. El intérprete (`evaluate_cmx`) evalúa los atributos e hijos y
-construye el `CmxValue`. El resaltado de la extensión de VS Code diferencia el
-contexto CMX (tags de colores propios) del código y de los tipos.
+Ejemplo completo: `examples/audit/features/12-cmx.clsx`.

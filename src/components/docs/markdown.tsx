@@ -26,22 +26,19 @@ export function resolveDocSlug(fromPath: string, href: string): string | null {
   if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("//")) return null;
 
   const [target, hash] = href.split("#");
-  const base = fromPath.split("/").slice(0, -1);
-  const parts = target.replace(/^\//, "").split("/");
-  const resolved: string[] = [];
-  for (const p of parts) {
-    if (p === "." || p === "") continue;
-    if (p === "..") {
-      resolved.pop();
-      continue;
-    }
-    resolved.push(p);
+  let segs = target.replace(/^\/+/, "").split("/").filter(Boolean);
+  if (segs[0] === "docs") segs = segs.slice(1);
+  if (segs.length === 0) return null;
+
+  const last = segs[segs.length - 1].replace(/\.md$/i, "");
+  segs[segs.length - 1] = last;
+
+  const knownSection = docIndex.sections.some((s) => s.key === segs[0]);
+  if (!knownSection) {
+    const mySection = fromPath.split("/")[0];
+    segs = [mySection, ...segs];
   }
-  const full = [...base, ...resolved].join("/");
-  const noExt = full.replace(/\.md$/i, "");
-  const segs = noExt.split("/");
-  const known = docIndex.sections.some((s) => s.key === segs[0]);
-  const slug = (known ? segs.slice(1) : segs).map(slugifySeg).join("/");
+  const slug = segs.map(slugifySeg).filter(Boolean).join("/");
   return slug ? `/docs/${slug}${hash ? `#${hash}` : ""}` : null;
 }
 
