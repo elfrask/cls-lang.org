@@ -35,7 +35,7 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <Card className="group relative overflow-hidden border-border/60 bg-card/40 transition-all duration-300 hover:border-primary/40 hover:bg-card/60">
+    <Card className="group relative overflow-hidden border-border/60 h-auto bg-card/40 transition-all duration-300 hover:border-primary/40 hover:bg-card/60">
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="absolute -top-10 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-primary/10 blur-2xl" />
       </div>
