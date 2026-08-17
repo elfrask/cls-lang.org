@@ -17,6 +17,8 @@ import {
   Loader2,
   Download,
   ArrowRight,
+  Wrench,
+  Terminal,
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -34,6 +36,8 @@ const TYPE_ICONS: Record<AssetType, LucideIcon> = {
   instalador: HardDriveDownload,
   portable: FileArchive,
   enlace: LinkIcon,
+  "ejecutable-sdk": Wrench,
+  "ejecutable-runtime": Terminal,
 };
 
 const PLATFORM_ICONS: Record<string, LucideIcon> = {

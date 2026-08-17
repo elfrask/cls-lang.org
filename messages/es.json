@@ -145,12 +145,12 @@
     "backToDownloads": "Volver a descargas",
     "windows": {
       "name": "Windows",
-      "description": "Instalador .msi para Windows 10/11 (x64).",
+      "description": "Ejecutables clx (SDK) y clxr (runtime) para Windows (x64), o el portable que incluye ambos.",
       "cmd": "clx.exe run app.clsx"
     },
     "linux": {
       "name": "Linux",
-      "description": "Paquete .deb y binarios para x64 y arm64.",
+      "description": "Ejecutables clx (SDK) y clxr (runtime) para Linux (x64), o el portable que incluye ambos.",
       "cmd": "./clx run app.clsx"
     },
     "macos": {
@@ -160,7 +160,7 @@
     },
     "source": {
       "name": "Código fuente",
-      "description": "Descarga el código fuente en tar.gz y compila desde el repositorio.",
+      "description": "Descarga el código fuente o la extensión de VS Code desde el repositorio.",
       "cmd": "cargo build --bin clx"
     },
     "viewAllVersions": "Ver todas las versiones",
@@ -207,7 +207,9 @@
       "paquete": "Paquete",
       "instalador": "Instalador",
       "portable": "Portable",
-      "enlace": "Enlace"
+      "enlace": "Enlace",
+      "ejecutable-sdk": "Ejecutable (SDK)",
+      "ejecutable-runtime": "Ejecutable (runtime)"
     },
     "empty": "Aún no hay versiones publicadas."
   },

@@ -5,7 +5,9 @@ export type AssetType =
   | "paquete"
   | "instalador"
   | "portable"
-  | "enlace";
+  | "enlace"
+  | "ejecutable-sdk"
+  | "ejecutable-runtime";
 
 export type ReleaseAsset = {
   filename: string;
