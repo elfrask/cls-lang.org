@@ -22,7 +22,7 @@
       "date": "2026-08-13",
       "author": "CLS Team",
       "tags": ["announcement", "releases", "release-dev"],
-      "excerpt": "The language is ~90% ready. The 2.0-dev1 is going through strict QA evaluations before we publish the first binaries; the first release will ship with the JIT interpreter (~×8000 vs previous versions, near native) and the compiler comes later."
+      "excerpt": "The 2.0-dev1 is now published. The latest JIT benchmark (fused WASM internals) puts it on par with C++/Rust in arithmetic and 100x+ faster than Python on several tests: fib ×330, arrays ×493 and calls ×480 over the baseline."
     },
     {
       "slug": "devlog-1-2",
