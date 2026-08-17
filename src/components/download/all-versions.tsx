@@ -54,8 +54,8 @@ const PLATFORM_ICONS: Record<string, LucideIcon> = {
   web: Globe,
 };
 
-function assetUrl(channel: "release" | "dev", asset: ReleaseAsset) {
-  return `/download/${channel}/${asset.filename}`;
+function assetUrl(_channel: "release" | "dev", asset: ReleaseAsset) {
+  return asset.url;
 }
 
 function VersionAccordion({

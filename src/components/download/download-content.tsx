@@ -44,8 +44,8 @@ function detectSystem(
   return { platform, arch };
 }
 
-function assetUrl(channel: "release" | "dev", asset: ReleaseAsset) {
-  return `/download/${channel}/${asset.filename}`;
+function assetUrl(_channel: "release" | "dev", asset: ReleaseAsset) {
+  return asset.url;
 }
 
 export async function DownloadContent({
