@@ -150,6 +150,7 @@
       "arch": "all",
       "format": "zip",
       "type": "paquete",
+      "label": "source-code",
       "size": "0.7 MB",
       "date": "2026-08-17",
       "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/cls-lang-2.0.0.zip",
@@ -161,10 +162,23 @@
       "arch": "all",
       "format": "zip",
       "type": "paquete",
+      "label": "vscode-extension",
       "size": "0.71 MB",
       "date": "2026-08-17",
       "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/cls-lang-vscode-extension.zip",
       "checksum": "sha256:bd64bd109e723c486dc3c749163315f8c5b402fe487d4d7d774d77b3e5805727"
+    },
+    {
+      "filename": "vscode-cls-extension-installer.vsix",
+      "platform": "source",
+      "arch": "all",
+      "format": "vsix",
+      "type": "instalador",
+      "label": "vscode-extension-installer",
+      "size": "0.71 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/vscode-cls-extension-installer.vsix",
+      "checksum": "sha256:a886bac41f6ecf0842f79686dab98aac0d86dc64195d4f9a60331b94d023e73d"
     }
   ]
 }

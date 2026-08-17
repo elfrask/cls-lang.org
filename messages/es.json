@@ -159,13 +159,16 @@
       "cmd": "./clx run app.clsx"
     },
     "source": {
-      "name": "Código fuente",
-      "description": "Descarga el código fuente o la extensión de VS Code desde el repositorio.",
+      "name": "Otras descargas",
+      "description": "Código fuente, extensión de VS Code y otros archivos adicionales.",
       "cmd": "cargo build --bin clx"
     },
     "viewAllVersions": "Ver todas las versiones",
     "downloadBtn": "Descargar",
     "sourceDownloadBtn": "Fuente",
+    "source-code": "Código fuente (zip)",
+    "vscode-extension": "Extensión de VS Code (zip)",
+    "vscode-extension-installer": "Instalador de extensión (vsix)",
     "showMore": "Ver más ({count})",
     "showLess": "Ver menos",
     "viaCargo": "Alternativa: instalar desde fuente",
@@ -200,7 +203,7 @@
       "windows": "Windows",
       "linux": "Linux",
       "macos": "macOS",
-      "source": "Código fuente",
+      "source": "Otras descargas",
       "web": "Web"
     },
     "types": {
@@ -212,7 +215,10 @@
       "ejecutable-runtime": "Ejecutable (runtime)",
       "binding-c": "Binding C",
       "binding-python": "Binding Python",
-      "binding-js": "Binding JS"
+      "binding-js": "Binding JS",
+      "source-code": "Código fuente (zip)",
+      "vscode-extension": "Extensión de VS Code (zip)",
+      "vscode-extension-installer": "Instalador de extensión (vsix)"
     },
     "empty": "Aún no hay versiones publicadas."
   },

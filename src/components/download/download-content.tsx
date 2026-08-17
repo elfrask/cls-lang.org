@@ -129,6 +129,7 @@ export async function DownloadContent({
   const assetLabel = (key: PlatformKey, asset: ReleaseAsset) => {
     const type = (asset.type ?? "portable") as AssetType;
     if (key === "source") {
+      if (asset.label) return t(asset.label);
       return type === "enlace"
         ? t("sourceDownloadBtn")
         : `${t("sourceDownloadBtn")} · ${asset.format ?? asset.arch}`;

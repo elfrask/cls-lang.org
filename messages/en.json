@@ -159,13 +159,16 @@
       "cmd": "./clx run app.clsx"
     },
     "source": {
-      "name": "Source code",
-      "description": "Download the source code or the VS Code extension from the repository.",
+      "name": "Other downloads",
+      "description": "Source code, VS Code extension and other additional files.",
       "cmd": "cargo build --bin clx"
     },
     "viewAllVersions": "View all versions",
     "downloadBtn": "Download",
     "sourceDownloadBtn": "Source",
+    "source-code": "Source code (zip)",
+    "vscode-extension": "VS Code extension (zip)",
+    "vscode-extension-installer": "Extension installer (vsix)",
     "showMore": "Show more ({count})",
     "showLess": "Show less",
     "viaCargo": "Alternative: install from source",
@@ -200,7 +203,7 @@
       "windows": "Windows",
       "linux": "Linux",
       "macos": "macOS",
-      "source": "Source",
+      "source": "Other downloads",
       "web": "Web"
     },
     "types": {
@@ -212,7 +215,10 @@
       "ejecutable-runtime": "Executable (runtime)",
       "binding-c": "C binding",
       "binding-python": "Python binding",
-      "binding-js": "JS binding"
+      "binding-js": "JS binding",
+      "source-code": "Source code (zip)",
+      "vscode-extension": "VS Code extension (zip)",
+      "vscode-extension-installer": "Extension installer (vsix)"
     },
     "empty": "No versions published yet."
   },

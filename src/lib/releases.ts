@@ -18,6 +18,7 @@ export type ReleaseAsset = {
   arch: string;
   format?: string;
   type?: AssetType;
+  label?: string;
   size?: string;
   date?: string;
   url: string;

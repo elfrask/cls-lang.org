@@ -174,7 +174,7 @@ function VersionAccordion({
                       <td className="px-5 py-3">
                         <span className="inline-flex items-center gap-2 text-muted-foreground">
                           <TypeIcon className="size-4" />
-                          {t(`types.${type}`)}
+                          {asset.label ? t(`types.${asset.label}`) : t(`types.${type}`)}
                         </span>
                       </td>
                       <td className="whitespace-nowrap px-5 py-3 text-muted-foreground">
