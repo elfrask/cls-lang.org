@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "roadmap-2-2",
+      "title": "Anuncio: el roadmap de CLS hacia la 2.2",
+      "date": "2026-08-17",
+      "author": "Equipo CLS",
+      "tags": ["announcement", "roadmap"],
+      "excerpt": "Aclaramos el roadmap de CLS hacia la 2.2: qué tiene ya la 2.0 (JIT cerca de C++/Rust y JS), las optimizaciones de strings, GC, registry, asincronía, los .clslib en 2.1 y el compilador AOT en 2.2. El proyecto no está listo para proyectos grandes, pero sí para automatizaciones y aplicaciones medianas."
+    },
+    {
       "slug": "devlog-2-0-dev1",
       "title": "Devlog: CLS 2.0-dev1, la primera entrega de la serie 2.0",
       "date": "2026-08-17",
