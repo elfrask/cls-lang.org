@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "devlog-2-0-dev1",
+      "title": "Devlog: CLS 2.0-dev1, the first release of the 2.0 series",
+      "date": "2026-08-17",
+      "author": "CLS Team",
+      "tags": ["releases", "release-dev"],
+      "excerpt": "First release of the 2.0 series: a complete rewrite in Rust with a JIT interpreter (CLS → WASM → wasmtime), static type checker, OOP, CMX and bindings. We compare against 1.1 and 1.2, and the first binaries are now available."
+    },
+    {
       "slug": "primer-devlog",
       "title": "Announcement: CLS 2.X, the path we're building",
       "date": "2026-08-12",

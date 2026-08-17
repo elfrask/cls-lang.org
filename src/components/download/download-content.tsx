@@ -16,6 +16,7 @@ import { Reveal } from "@/components/reveal";
 import { CodeBlock } from "@/components/code-block";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { PlatformAssets } from "@/components/download/platform-assets";
 import {
   pickAsset,
   type ReleaseFile,
@@ -242,21 +243,13 @@ export async function DownloadContent({
                         {t(`${key}.cmd`)}
                       </code>
                     )}
-                    <div className="mt-4 flex flex-col gap-2">
-                      {assets.map((asset) => (
-                        <Button
-                          key={asset.filename}
-                          asChild
-                          size="sm"
-                          variant={i === 0 ? "default" : "outline"}
-                        >
-                          <a href={assetUrl(current.channel, asset)}>
-                            <Download data-icon="inline-start" />
-                            {assetLabel(key, asset)}
-                          </a>
-                        </Button>
-                      ))}
-                    </div>
+                    <PlatformAssets
+                      items={assets.map((asset) => ({
+                        label: assetLabel(key, asset),
+                        url: assetUrl(current.channel, asset),
+                      }))}
+                      accent={i === 0}
+                    />
                   </div>
                 </Reveal>
               );

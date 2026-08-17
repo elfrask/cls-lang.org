@@ -1,114 +1,170 @@
 {
   "version": "2.0-dev1",
   "channel": "dev",
-  "released": "2026-08-05",
-  "comingSoon": true,
-  "notes": "Implementación 2.0 en Rust. Versión de desarrollo: CLS aún no está en fase estable.",
+  "released": "2026-08-17",
+  "notes": "Primera entrega de la serie 2.0: reescritura completa en Rust con intérprete JIT (CLS → WASM → wasmtime), typechecker estático, OOP, CMX, LSP y bindings C/Python/JS.",
   "highlights": [
-    "Implementación 2.0 escrita en Rust",
-    "Compilación a binario nativo (en desarrollo)",
-    "WASM como backend portable",
-    "Sistema de módulos con `.clslib` y verificación multi-módulo"
+    "Implementación 2.0 completa en Rust (workspace de 7 crates/nodos)",
+    "Intérprete JIT: CLS → WASM → wasmtime (fib 4391ms → 13ms, arrays 345ms → 0.7ms)",
+    "Type checker en compile-time (clx check)",
+    "Lenguaje: OOP, enums, tuplas, records tipados, genéricos, CMX, async/await",
+    "Toolchain: CLI clx, runtime ligero clxr, LSP, bindings C/Python/JS"
   ],
-  "blog": "anuncio-estado-2-0-dev1",
+  "blog": "devlog-2-0-dev1",
   "assets": [
     {
-      "filename": "cls-2.0-dev1-windows-x64.msi",
+      "filename": "clx-windows-x64.exe",
       "platform": "windows",
       "arch": "x64",
-      "format": "msi",
-      "type": "instalador",
-      "size": "12.4 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-windows-x64.msi",
-      "checksum": "sha256:a3f8c19b6e4d2f7a9c0e5b8d1f4a6c2e9b7d5f1a3c8e6b0d2f4a7c9e1b5d3f6a0c"
+      "format": "exe",
+      "type": "portable",
+      "size": "26.06 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clx-windows-x64.exe",
+      "checksum": "sha256:29fe47b2fd23e559159a5dbf9d6e49c01397a596afe2adbf2e71455e847ca912"
     },
     {
-      "filename": "cls-2.0-dev1-windows-x64.zip",
+      "filename": "cls-windows-v2.0.0-ec93a48.zip",
       "platform": "windows",
       "arch": "x64",
       "format": "zip",
       "type": "portable",
-      "size": "11.1 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-windows-x64.zip",
-      "checksum": "sha256:9e7b2d4f6a1c3e5b7d9f0a2c4e6b8d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d"
+      "size": "9.6 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/cls-windows-v2.0.0-ec93a48.zip",
+      "checksum": "sha256:b369c9dc4e1425d52f7026485e3cdea18fbd96baa52acaaf87b5a27fee30bed7"
     },
     {
-      "filename": "cls-2.0-dev1-linux-x64.deb",
-      "platform": "linux",
+      "filename": "clxr-windows-x64.exe",
+      "platform": "windows",
       "arch": "x64",
-      "format": "deb",
-      "type": "paquete",
-      "size": "9.8 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-linux-x64.deb",
-      "checksum": "sha256:b5d9f2a7c4e6b0d8f1a3c5e7b9d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f"
-    },
-    {
-      "filename": "cls-2.0-dev1-linux-arm64.deb",
-      "platform": "linux",
-      "arch": "arm64",
-      "format": "deb",
-      "type": "paquete",
-      "size": "9.2 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-linux-arm64.deb",
-      "checksum": "sha256:c7f1b3d5a9e0c2f4a6b8d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e"
-    },
-    {
-      "filename": "cls-2.0-dev1-linux-x64.tar.gz",
-      "platform": "linux",
-      "arch": "x64",
-      "format": "tar.gz",
+      "format": "exe",
       "type": "portable",
-      "size": "8.9 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-linux-x64.tar.gz",
-      "checksum": "sha256:d2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6"
+      "size": "2.28 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clxr-windows-x64.exe",
+      "checksum": "sha256:e1969796ece4afc568536dd179d0733172453603543b0f56046eb86125bb3b69"
     },
     {
-      "filename": "cls-2.0-dev1-macos-arm64.zip",
-      "platform": "macos",
-      "arch": "arm64",
-      "format": "zip",
-      "type": "portable",
-      "size": "11.6 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-macos-arm64.zip",
-      "checksum": "sha256:e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2"
-    },
-    {
-      "filename": "cls-2.0-dev1-macos-x64.zip",
-      "platform": "macos",
+      "filename": "clsb-c-windows.zip",
+      "platform": "windows",
       "arch": "x64",
       "format": "zip",
-      "type": "portable",
-      "size": "11.9 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-macos-x64.zip",
-      "checksum": "sha256:f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2f4a6"
-    },
-    {
-      "filename": "cls-2.0-dev1-source.tar.gz",
-      "platform": "source",
-      "arch": "all",
-      "format": "tar.gz",
       "type": "paquete",
-      "size": "1.8 MB",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls/releases/download/dev/cls-2.0-dev1-source.tar.gz",
-      "checksum": "sha256:0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b"
+      "size": "6.64 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clsb-c-windows.zip",
+      "checksum": "sha256:7207a9e48f30388faea6ec484e0b184268ae1252e43de731961c2a4e6eca9f4e"
     },
     {
-      "filename": "cls-2.0-dev1-source.link",
+      "filename": "clsb-python-windows.zip",
+      "platform": "windows",
+      "arch": "x64",
+      "format": "zip",
+      "type": "paquete",
+      "size": "6.64 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clsb-python-windows.zip",
+      "checksum": "sha256:ac366e64a747ff06d792f28c332201c729dd2107e632eabb270990403a24ac24"
+    },
+    {
+      "filename": "clsb-js-windows.zip",
+      "platform": "windows",
+      "arch": "x64",
+      "format": "zip",
+      "type": "paquete",
+      "size": "6.64 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clsb-js-windows.zip",
+      "checksum": "sha256:674484c07330d943d4a4d0b802d903cdd08733f4b2b5eadfbece42046737dda9"
+    },
+    {
+      "filename": "clx-linux-x64",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "bin",
+      "type": "portable",
+      "size": "35.95 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clx-linux-x64",
+      "checksum": "sha256:70f9c48b5ecdabb048c1504dbfc5e1eb92df6b00b23c4227bbb35cc0afcba3ed"
+    },
+    {
+      "filename": "cls-linux-v2.0.0-ec93a48.zip",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "zip",
+      "type": "portable",
+      "size": "11.28 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/cls-linux-v2.0.0-ec93a48.zip",
+      "checksum": "sha256:0c2fa2fe482a8a7e0e0e16c44c7a3d07166b4e6ea3abbeb0ab49b2806ada68e6"
+    },
+    {
+      "filename": "clxr-linux-x64",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "bin",
+      "type": "portable",
+      "size": "2.58 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clxr-linux-x64",
+      "checksum": "sha256:ce6e449e58a2cfe1d432606334cb0df05345155829cfaf2de7905d99d9345344"
+    },
+    {
+      "filename": "clsb-c-linux.zip",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "zip",
+      "type": "paquete",
+      "size": "7.86 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clsb-c-linux.zip",
+      "checksum": "sha256:af7c824d928664541864623783419ee85f097c4a3bbd6963f725546aa6b71aaa"
+    },
+    {
+      "filename": "clsb-python-linux.zip",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "zip",
+      "type": "paquete",
+      "size": "7.87 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clsb-python-linux.zip",
+      "checksum": "sha256:76ee30af94ae23f1650bcefd22d4c8a9088d1dfcd90c87690cb36b7dc4ec983a"
+    },
+    {
+      "filename": "clsb-js-linux.zip",
+      "platform": "linux",
+      "arch": "x64",
+      "format": "zip",
+      "type": "paquete",
+      "size": "7.86 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/clsb-js-linux.zip",
+      "checksum": "sha256:4bc21047f65739a3bd177a7ffa4ef55fe27141d993a7d023c7f890861f3f0b63"
+    },
+    {
+      "filename": "cls-lang-2.0.0.zip",
       "platform": "source",
       "arch": "all",
-      "format": "link",
-      "type": "enlace",
-      "size": "-",
-      "date": "2026-08-05",
-      "url": "https://github.com/elfrask/cls"
+      "format": "zip",
+      "type": "paquete",
+      "size": "0.7 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/cls-lang-2.0.0.zip",
+      "checksum": "sha256:ab4f22fec2a1d89daaa771eaede760442e1bc4236ac53e60a78e3522bed9c952"
+    },
+    {
+      "filename": "cls-lang-vscode-extension.zip",
+      "platform": "source",
+      "arch": "all",
+      "format": "zip",
+      "type": "paquete",
+      "size": "0.71 MB",
+      "date": "2026-08-17",
+      "url": "https://github.com/elfrask/cls/releases/download/v2.0.0-dev-1/cls-lang-vscode-extension.zip",
+      "checksum": "sha256:bd64bd109e723c486dc3c749163315f8c5b402fe487d4d7d774d77b3e5805727"
     }
   ]
 }

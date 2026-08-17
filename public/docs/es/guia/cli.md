@@ -3,7 +3,7 @@
 El binario `clx` es el CLI de desarrollo. El binario `clxr` es el runtime
 ligero (ver `herramientas/clxr.md`).
 
-```text
+```ps
 clx <subcomando> [opciones] [argumentos]
 ```
 
@@ -12,8 +12,11 @@ clx <subcomando> [opciones] [argumentos]
 | Subcomando | Estado |
 |---|---|
 | `new`, `add`, `remove`/`rm`, `install`/`i`, `run`, `check`, `repl`, `build`, `lsp`, `ast`, `maptype`, `clean`, `-v`/`--version`, `-h`/`--help` | Implementados |
-| `init`, `tree`, `fmt` | **Placeholder** — imprimen "no implementado" y salen con código 1 |
-| `--quiet` | No hace nada (retorna 0) |
+| `init`, `tree`, `fmt` | **Placeholder** - imprimen "no implementado" y salen con código 1 |
+| `--quiet` | Silencia logs; se usa **antes** del subcomando: `clx --quiet run ...` |
+
+Todos los subcomandos aceptan `-h`/`--help` (imprimen su ayuda y salen con 0,
+sin efectos colaterales).
 
 ## `clx new <nombre> [--lib]`
 
@@ -28,17 +31,19 @@ Crea un proyecto nuevo con la estructura mínima:
     └── main.clsx     # function main(args: String[]) -> int
 ```
 
-- `--lib` — proyecto librería: `entry` vacío, `target: "library"` y no genera
+- `--lib` - proyecto librería: `entry` vacío, `target: "library"` y no genera
   `main.clsx`.
+- El nombre no puede empezar con `-` (los flags se interpretan como opciones);
+  `clx new -h` muestra la ayuda del subcomando.
 
 ## `clx add <paquete> [--dev]` · `clx remove|rm <paquete>` · `clx install|i`
 
 Gestión de dependencias con `cls.json`:
 
-- `add` — agrega `"<paquete>": "^1.0.0"` a `dependencies` (o `devDependencies`
+- `add` - agrega `"<paquete>": "^1.0.0"` a `dependencies` (o `devDependencies`
   con `--dev`). Requiere un `cls.json` en el directorio actual.
-- `remove` — quita el paquete de `dependencies` o `devDependencies`.
-- `install` — descarga cada dependencia desde el registry como
+- `remove` - quita el paquete de `dependencies` o `devDependencies`.
+- `install` - descarga cada dependencia desde el registry como
   `modules/<paquete>/mod.clsx` y escribe el lockfile `cls.lock`.
 
 El registry se toma de, en orden: `CLS_REGISTRY` > `cls.json["registry"]` >
@@ -46,29 +51,29 @@ El registry se toma de, en orden: `CLS_REGISTRY` > `cls.json["registry"]` >
 
 ## `clx run [archivo] [--] [args...]`
 
-Compila y ejecuta con el **JIT** (CLS → WASM → wasmtime), el intérprete
+Compila y ejecuta con el **JIT** (CLS -> WASM -> wasmtime), el intérprete
 objetivo por defecto. Los argumentos tras `--` se pasan a `main(args)` (y
 quedan disponibles vía `process.args()`).
 
 Sin archivo, usa el `entry` de `cls.json`; si no hay manifiesto, busca
 `main.clsx`, `src/main.clsx`, `mod.clsx` o `src/mod.clsx`.
 
-```text
+```ps
 clx run main.clsx
 clx run app.clsx -- a1 a2
 ```
 
 Opciones:
 
-- `--jit, -j` — obsoleto, sin efecto (el JIT ya es el default).
-- `--ast-walker` — ejecuta con el tree-walker **DEPRECADO** (imprime una
+- `--jit, -j` - obsoleto, sin efecto (el JIT ya es el default).
+- `--ast-walker` - ejecuta con el tree-walker **DEPRECADO** (imprime una
   advertencia en stderr; solo referencia sintáctica).
-- `--target <tripla>, -t` — simula el entorno (`arch-os-abi`) para la
+- `--target <tripla>, -t` - simula el entorno (`arch-os-abi`) para la
   directiva `when` (no cambia la compilación).
-- `--` — separador de argumentos de la aplicación.
+- `--` - separador de argumentos de la aplicación.
 
-Los `import "mod"` se resuelven con el resolver del JIT: caché de módulos →
-directorio del archivo que importa → `modules/` del proyecto → módulos
+Los `import "mod"` se resuelven con el resolver del JIT: caché de módulos ->
+directorio del archivo que importa -> `modules/` del proyecto -> módulos
 globales `~/.cls/modules/` (ver `lenguaje/modulos.md`).
 
 ## `clx check [archivo|dir] [--strict]`
@@ -78,7 +83,7 @@ los `.clsx` recursivamente, saltando `modules/`, `dist/`, `libs/` y ocultos)
 o el `entry` del proyecto. Resuelve los imports del grafo y registra sus
 exports como prelude (los tipos importados son verificables).
 
-- `--strict` — activa el modo estricto (asignaciones incompatibles = error).
+- `--strict` - activa el modo estricto (asignaciones incompatibles = error).
 - Reporta `[ERROR|WARN|INFO] mensaje (file:line:col)` con línea + caret.
 - Código de salida: 0 sin errores, 1 con errores.
 
@@ -86,22 +91,24 @@ exports como prelude (los tipos importados son verificables).
 
 Empaqueta la aplicación en un `.clsapp` (zip con dos entradas):
 
-- `manifest.json` — `{name, version, entry, format: "source"}`.
-- `source.clsx` — el código fuente crudo del entry.
+- `manifest.json` - `{name, version, entry, format: "source"}`.
+- `source.clsx` - el código fuente crudo del entry.
 
 Default de salida: `dist/app.clsapp`. Nota: el empaquetado es de **código
 fuente** (el AST/WASM embebido es un trabajo futuro).
 
 ## `clx repl`
 
-REPL interactivo (usando el tree-walker). Evalúa declaraciones completas;
-las expresiones sueltas se imprimen. Comandos: `exit`, `quit`, `:exit`,
-`:quit`, `:salir`, `:q`; ayuda con `:help`/`:h`. Ver `herramientas/repl.md`.
+REPL interactivo con el **JIT** (WASM + wasmtime) y **estado persistente**
+entre líneas (variables, arrays y strings sobreviven). Evalúa declaraciones
+completas; las expresiones sueltas se imprimen. Comandos: `exit`, `quit`,
+`:exit`, `:quit`, `:salir`, `:q`; ayuda con `:help`/`:h`. Ver
+`herramientas/repl.md`.
 
 ## `clx lsp [--silent]`
 
-Lanza el servidor LSP sobre **stdin/stdout** (no existe transporte TCP pese a
-que el help global lo mencione). Ver `herramientas/lsp.md`.
+Lanza el servidor LSP sobre **stdin/stdout**. `-s`/`--silent` suprime el banner
+de inicio. Ver `herramientas/lsp.md`.
 
 ## `clx ast <archivo> [--json]`
 
@@ -132,5 +139,5 @@ workspace `[cwd]/.cls-cache/`.
 
 ## Códigos de salida
 
-- `0` — éxito.
-- `1` — error de compilación, verificación o ejecución.
+- `0` - éxito.
+- `1` - error de compilación, verificación o ejecución.

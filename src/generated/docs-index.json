@@ -71,7 +71,7 @@
         },
         {
           "slug": "lenguaje/extension",
-          "title": "Extensiones nativas (`extension` — FFI)"
+          "title": "Extensiones nativas (`extension` - FFI)"
         },
         {
           "slug": "lenguaje/cmx",
@@ -152,6 +152,10 @@
         {
           "slug": "embedding/python",
           "title": "Embedding CLS en Python (`clsb`)"
+        },
+        {
+          "slug": "embedding/node",
+          "title": "Embedding CLS en Node.js (`@cls-embed/node`)"
         }
       ]
     },
@@ -211,6 +215,12 @@
       "path": "desarrollo/testing.md",
       "title": "Testing",
       "section": "desarrollo"
+    },
+    {
+      "slug": "embedding/node",
+      "path": "embedding/node.md",
+      "title": "Embedding CLS en Node.js (`@cls-embed/node`)",
+      "section": "embedding"
     },
     {
       "slug": "embedding/python",
@@ -317,7 +327,7 @@
     {
       "slug": "lenguaje/extension",
       "path": "lenguaje/extension.md",
-      "title": "Extensiones nativas (`extension` — FFI)",
+      "title": "Extensiones nativas (`extension` - FFI)",
       "section": "lenguaje"
     },
     {

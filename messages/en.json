@@ -166,6 +166,8 @@
     "viewAllVersions": "View all versions",
     "downloadBtn": "Download",
     "sourceDownloadBtn": "Source",
+    "showMore": "Show more ({count})",
+    "showLess": "Show less",
     "viaCargo": "Alternative: install from source",
     "viaCargoText": "CLS is written in Rust. You can build the CLI from the repository:",
     "cargoCmd": "cargo build --bin clx",
