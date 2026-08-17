@@ -7,7 +7,10 @@ export type AssetType =
   | "portable"
   | "enlace"
   | "ejecutable-sdk"
-  | "ejecutable-runtime";
+  | "ejecutable-runtime"
+  | "binding-c"
+  | "binding-python"
+  | "binding-js";
 
 export type ReleaseAsset = {
   filename: string;

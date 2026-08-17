@@ -19,6 +19,9 @@ import {
   ArrowRight,
   Wrench,
   Terminal,
+  Braces,
+  Boxes,
+  FileJson,
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +41,9 @@ const TYPE_ICONS: Record<AssetType, LucideIcon> = {
   enlace: LinkIcon,
   "ejecutable-sdk": Wrench,
   "ejecutable-runtime": Terminal,
+  "binding-c": Braces,
+  "binding-python": Boxes,
+  "binding-js": FileJson,
 };
 
 const PLATFORM_ICONS: Record<string, LucideIcon> = {

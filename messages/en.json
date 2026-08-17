@@ -209,7 +209,10 @@
       "portable": "Portable",
       "enlace": "Link",
       "ejecutable-sdk": "Executable (SDK)",
-      "ejecutable-runtime": "Executable (runtime)"
+      "ejecutable-runtime": "Executable (runtime)",
+      "binding-c": "C binding",
+      "binding-python": "Python binding",
+      "binding-js": "JS binding"
     },
     "empty": "No versions published yet."
   },
