@@ -7,7 +7,6 @@
     "docs": "Docs",
     "blog": "Blog",
     "showcase": "Showcase",
-    "playground": "Playground",
     "community": "Comunidad",
     "about": "Acerca",
     "search": "Paquetes",
@@ -312,26 +311,6 @@
       "embedding": "Embedding",
       "desarrollo": "Desarrollo"
     }
-  },
-  "playground": {
-    "title": "Playground",
-    "subtitle": "Prueba CLS directamente desde el navegador.",
-    "editorTitle": "hola.clsx",
-    "terminalTitle": "playground",
-    "tabEditor": "Editor",
-    "tabTerminal": "Terminal",
-    "runButton": "Ejecutar",
-    "runCmd": "$ clx run hola.clsx",
-    "exitCode": "Proceso finalizado con código de salida {code}.",
-    "promptUser": "clx",
-    "promptHost": "playground",
-    "welcomeLine1": "CLS Playground — ejecuta comandos desde el navegador.",
-    "welcomeLine2": "Por ahora solo está disponible el comando `echo`. Proba `echo hola`.",
-    "commandPrefix": ">",
-    "echoUsage": "Uso: echo <texto>",
-    "unknownCmd": "Comando no reconocido: {cmd}",
-    "inputPlaceholder": "Escribe un comando…",
-    "hintText": "Solo `echo` está disponible en esta versión del playground."
   },
   "notFound": {
     "title": "404",

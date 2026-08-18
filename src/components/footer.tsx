@@ -7,7 +7,6 @@ import { getCurrentVersion } from "@/lib/releases";
 const SITE_LINKS = [
   ["/docs", "nav.docs"],
   ["/blog", "nav.blog"],
-  ["/playground", "nav.playground"],
   ["/showcase", "nav.showcase"],
   ["/comunidad", "nav.community"],
   ["/about", "nav.about"],

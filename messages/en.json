@@ -7,7 +7,6 @@
     "docs": "Docs",
     "blog": "Blog",
     "showcase": "Showcase",
-    "playground": "Playground",
     "community": "Community",
     "about": "About",
     "search": "Packages",
@@ -312,26 +311,12 @@
       "embedding": "Embedding",
       "desarrollo": "Development"
     }
-  },
-  "playground": {
-    "title": "Playground",
-    "subtitle": "Try CLS directly from your browser.",
-    "editorTitle": "hola.clsx",
-    "terminalTitle": "playground",
-    "tabEditor": "Editor",
-    "tabTerminal": "Terminal",
-    "runButton": "Run",
-    "runCmd": "$ clx run hola.clsx",
-    "exitCode": "Process exited with code {code}.",
-    "promptUser": "clx",
-    "promptHost": "playground",
-    "welcomeLine1": "CLS Playground — run commands from the browser.",
-    "welcomeLine2": "For now only the `echo` command is available. Try `echo hello`.",
-    "commandPrefix": ">",
-    "echoUsage": "Usage: echo <text>",
-    "unknownCmd": "Unknown command: {cmd}",
-    "inputPlaceholder": "Type a command…",
-    "hintText": "Only `echo` is available in this version of the playground."
+},
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "text": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home"
   },
   "notFound": {
     "title": "404",
