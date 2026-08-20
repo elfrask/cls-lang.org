@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
@@ -10,6 +11,39 @@ import { readBlogIndex, readBlogPost, readingTime } from "@/lib/blog";
 import { getReleaseByBlog } from "@/lib/releases";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/blog/[slug]">): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const post = readBlogPost(locale, slug);
+  if (!post) return {};
+
+  const image = post.meta.image
+    ? {
+        url: post.meta.image,
+        alt: post.meta.imageAlt ?? post.meta.title,
+      }
+    : undefined;
+
+  return {
+    title: post.meta.title,
+    description: post.meta.excerpt,
+    openGraph: {
+      title: post.meta.title,
+      description: post.meta.excerpt,
+      type: "article",
+      publishedTime: post.meta.date,
+      images: image ? [image] : undefined,
+    },
+    twitter: {
+      card: image ? "summary_large_image" : "summary",
+      title: post.meta.title,
+      description: post.meta.excerpt,
+      images: image ? [image.url] : undefined,
+    },
+  };
+}
 
 export default async function BlogPostPage({
   params,

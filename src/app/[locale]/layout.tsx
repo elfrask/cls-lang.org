@@ -24,7 +24,15 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: "CLS - Lenguaje de programación Multiplataforma",
-  description: "Lenguaje modular, seguro, ligero y multiplataforma"
+  description: "Lenguaje modular, seguro, ligero y multiplataforma",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://cls-lang.vercel.app",
+  ),
+  openGraph: {
+    title: "CLS - Lenguaje de programación Multiplataforma",
+    description: "Lenguaje modular, seguro, ligero y multiplataforma",
+    type: "website",
+  },
 } 
 
 export default async function LocaleLayout({
