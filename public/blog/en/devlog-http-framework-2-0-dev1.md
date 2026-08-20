@@ -1,6 +1,6 @@
 ---
 title: Devlog: testing a mini HTTP framework with 2.0-dev1
-date: 2026-08-17
+date: 2026-08-19
 author: CLS Team
 excerpt: We put 2.0-dev1 to the test by building a mini HTTP framework (router + task CRUD + server on clshttp.dll). This report documents the language bugs we found: broken records at runtime, stringify(bool/null), break in loops, pointer-based string comparisons, and the workarounds that made the app work end to end.
 tags: [testings, ffi-native, releases, release-dev]
