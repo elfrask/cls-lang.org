@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "devlog-http-framework-2-0-dev1",
+      "title": "Devlog: testing a mini HTTP framework with 2.0-dev1",
+      "date": "2026-08-17",
+      "author": "CLS Team",
+      "tags": ["testings", "ffi-native", "releases", "release-dev"],
+      "excerpt": "We put 2.0-dev1 to the test by building a mini HTTP framework (router + task CRUD + server on clshttp.dll). This report documents the language bugs found: broken records at runtime, stringify(bool/null), break in loops, pointer-based string comparisons, and the workarounds that made the app work end to end."
+    },
+    {
       "slug": "roadmap-2-2",
       "title": "Announcement: the CLS roadmap towards 2.2",
       "date": "2026-08-17",

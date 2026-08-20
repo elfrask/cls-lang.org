@@ -44,17 +44,19 @@ export default async function BlogPage({
     const content = full?.content ?? "";
     return {
       slug: post.slug,
-      title: post.title,
-      date: post.date,
-      excerpt: post.excerpt,
-      isNew: isNewPost(post.date),
+      title: full?.meta.title ?? post.title,
+      date: full?.meta.date ?? post.date,
+      excerpt: full?.meta.excerpt ?? post.excerpt,
+      isNew: isNewPost(full?.meta.date ?? post.date),
       minutes: full ? readingTime(full.content) : undefined,
-      tags: post.tags,
+      tags: full?.meta.tags ?? post.tags,
+      image: full?.meta.image,
+      imageAlt: full?.meta.imageAlt,
       searchText: [
-        post.title,
-        post.excerpt ?? "",
-        post.date,
-        post.author ?? "",
+        full?.meta.title ?? post.title,
+        full?.meta.excerpt ?? post.excerpt ?? "",
+        full?.meta.date ?? post.date,
+        full?.meta.author ?? post.author ?? "",
         stripMarkdown(content),
       ].join(" "),
     };

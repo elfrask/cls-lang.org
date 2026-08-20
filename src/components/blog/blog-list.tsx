@@ -16,6 +16,8 @@ export type BlogListPost = {
   isNew?: boolean;
   minutes?: number;
   tags?: string[];
+  image?: string;
+  imageAlt?: string;
   searchText: string;
 };
 
@@ -27,6 +29,9 @@ const TAG_ORDER = [
   "releases",
   "release-dev",
   "release-stable",
+  "testings",
+  "roadmap",
+  "ffi-native",
   "info",
   "history",
 ];
@@ -150,6 +155,15 @@ export function BlogList({ posts }: { posts: BlogListPost[] }) {
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col gap-2 rounded-2xl glass p-6 transition-colors hover:border-primary/40"
               >
+                {post.image && (
+                  <div className="-mx-6 -mt-6 mb-2 overflow-hidden rounded-t-2xl">
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt ?? post.title}
+                      className="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                )}
                 <div className="flex items-center gap-3 text-xs text-muted-foreground">
                   <time dateTime={post.date}>{post.date}</time>
                   {post.minutes && (

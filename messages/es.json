@@ -250,6 +250,9 @@
       "releases": "Releases",
       "release-dev": "Release dev",
       "release-stable": "Release estable",
+      "testings": "Testings",
+      "roadmap": "Roadmap",
+      "ffi-native": "FFI Native",
       "info": "Información",
       "history": "Historia"
     }

@@ -64,6 +64,21 @@ export default async function BlogPostPage({
           </div>
         </div>
 
+        {post.meta.image && (
+          <figure className="mt-8">
+            <img
+              src={post.meta.image}
+              alt={post.meta.imageAlt ?? post.meta.title}
+              className="w-full rounded-2xl border border-border/60 object-cover"
+            />
+            {post.meta.imageCaption && (
+              <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                {post.meta.imageCaption}
+              </figcaption>
+            )}
+          </figure>
+        )}
+
         <article className="mt-8">
           <BlogMarkdown content={post.content} />
         </article>
